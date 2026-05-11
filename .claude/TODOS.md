@@ -6,9 +6,11 @@
 - [x] Set up Astro 6 font API (Inter + Noto Sans JP)
 
 ## Layouts & Structure
-- [ ] Create BaseLayout.astro (html shell, fonts, meta)
-- [ ] Create DrillLayout.astro (extends Base, adds progress nav)
-- [ ] Set up Astro Content Collections with zod schemas
+- [x] Create BaseLayout.astro (html shell, fonts, meta)
+- [x] Create DrillLayout.astro (extends Base, adds progress nav)
+- [x] Set up Astro Content Collections with zod schemas
+- [x] Create Header component with dark mode toggle
+- [x] Create demo landing page with drill grid
 
 ## Content & Data
 - [ ] Create drill data files (past-form.json, particles.json)
@@ -24,7 +26,7 @@
 - [ ] Create FeedbackBanner.astro (correct/wrong feedback)
 
 ## Pages
-- [ ] Create src/pages/index.astro (landing with drill grid)
+- [x] Create src/pages/index.astro (landing with drill grid)
 - [ ] Create src/pages/drills/index.astro (all drills index)
 - [ ] Create src/pages/drills/past-form.astro (past tense drill)
 - [ ] Create src/pages/drills/particles.astro (particle drill)

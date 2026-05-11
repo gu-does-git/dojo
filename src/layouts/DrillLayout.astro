@@ -1,0 +1,92 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  drillType: string;
+  score?: number;
+  total?: number;
+}
+
+const { title, drillType, score = 0, total = 0 } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div class="flex flex-col min-h-screen">
+    {/* Header with progress */}
+    <header class="bg-light-surface dark:bg-dark-surface border-b border-light-border dark:border-dark-border sticky top-0 z-10">
+      <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <a href="/" class="text-sm text-primary hover:text-accent transition">
+            ← Back
+          </a>
+          <h1 class="text-xl font-semibold text-primary">{title}</h1>
+        </div>
+
+        {/* Progress indicator */}
+        {total > 0 && (
+          <div class="flex items-center gap-3">
+            <span class="text-sm text-secondary">{score} / {total}</span>
+            <div class="w-32 h-2 bg-light-border dark:bg-dark-border rounded-full overflow-hidden">
+              <div
+                class="h-full bg-accent dark:bg-accent-dark transition-all duration-300"
+                style={`width: ${(score / total) * 100}%`}
+              />
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+
+    {/* Main content */}
+    <main class="flex-1">
+      <div class="max-w-2xl mx-auto px-4 py-8">
+        <slot />
+      </div>
+    </main>
+
+    {/* Footer */}
+    <footer class="border-t border-light-border dark:border-dark-border bg-light-surface dark:bg-dark-surface mt-12">
+      <div class="max-w-4xl mx-auto px-4 py-6 text-center text-sm text-secondary">
+        <p>Dojo — Japanese Grammar Drills</p>
+      </div>
+    </footer>
+  </div>
+
+  <style is:global>
+    .text-primary {
+      color: var(--text-light);
+    }
+    html.dark .text-primary {
+      color: var(--text-dark);
+    }
+
+    .text-secondary {
+      color: var(--muted-light);
+    }
+    html.dark .text-secondary {
+      color: var(--muted-dark);
+    }
+
+    .bg-light-surface {
+      background: var(--surface-light);
+    }
+    html.dark .bg-light-surface {
+      background: var(--surface-dark);
+    }
+
+    .border-light-border {
+      border-color: var(--border-light);
+    }
+    html.dark .border-light-border {
+      border-color: var(--border-dark);
+    }
+
+    .bg-accent {
+      background: var(--accent);
+    }
+    html.dark .bg-accent {
+      background: var(--accent-dark);
+    }
+  </style>
+</BaseLayout>

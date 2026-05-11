@@ -1,0 +1,65 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = 'Dojo' } = Astro.props;
+---
+
+<header class="bg-light-surface dark:bg-dark-surface border-b border-light-border dark:border-dark-border sticky top-0 z-50">
+  <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="text-lg font-semibold text-light-text dark:text-dark-text hover:text-accent transition">
+      {title}
+    </a>
+    <button
+      onclick="toggleDarkMode()"
+      class="px-4 py-2 rounded-lg border border-light-border dark:border-dark-border bg-white dark:bg-dark-surface text-light-text dark:text-dark-text hover:bg-light-surface dark:hover:bg-dark-surface transition text-sm font-medium"
+      title="Toggle dark mode"
+    >
+      🌙
+    </button>
+  </div>
+</header>
+
+<script>
+  function toggleDarkMode() {
+    const html = document.documentElement;
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+  }
+
+  // Initialize theme from localStorage or system preference
+  const saved = localStorage.getItem('theme');
+  const isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  if (isDark) document.documentElement.classList.add('dark');
+
+  // Make available globally
+  (window as any).toggleDarkMode = toggleDarkMode;
+</script>
+
+<style is:global>
+  .bg-light-surface {
+    background: var(--surface-light);
+  }
+  html.dark .bg-light-surface {
+    background: var(--surface-dark);
+  }
+
+  .border-light-border {
+    border-color: var(--border-light);
+  }
+  html.dark .border-light-border {
+    border-color: var(--border-dark);
+  }
+
+  .text-light-text {
+    color: var(--text-light);
+  }
+  html.dark .text-light-text {
+    color: var(--text-dark);
+  }
+
+  .bg-dark-surface {
+    background: var(--surface-dark);
+  }
+</style>

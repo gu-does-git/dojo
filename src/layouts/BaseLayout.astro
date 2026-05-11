@@ -1,0 +1,94 @@
+---
+import { Font } from 'astro:assets';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Dojo — Japanese Grammar Drills', description = 'Interactive practice platform for Japanese grammar.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-noto-sans-jp" preload />
+    <style is:global>
+      :root {
+        /* Light mode colors */
+        --bg-light: #ffffff;
+        --surface-light: #f4f4f8;
+        --border-light: #e2e2ec;
+        --text-light: #0f0f13;
+        --muted-light: #6b6b80;
+
+        /* Dark mode colors */
+        --bg-dark: #0f0f13;
+        --surface-dark: #1a1a24;
+        --border-dark: #2a2a38;
+        --text-dark: #e8e8f0;
+        --muted-dark: #7070a0;
+
+        /* Accents */
+        --accent: #6366f1;
+        --accent-dark: #818cf8;
+        --accent2: #8b5cf6;
+        --accent2-dark: #a78bfa;
+
+        /* Feedback */
+        --success: #22c55e;
+        --success-dark: #4ade80;
+        --error: #ef4444;
+        --error-dark: #f87171;
+
+        /* Fonts */
+        --font-inter: var(--font-inter, 'Inter', sans-serif);
+        --font-noto: var(--font-noto-sans-jp, 'Noto Sans JP', sans-serif);
+
+        /* Default to light mode */
+        color-scheme: light;
+      }
+
+      html.dark {
+        color-scheme: dark;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        background: var(--bg-light);
+        color: var(--text-light);
+        font-family: var(--font-inter);
+        line-height: 1.6;
+        transition: background-color 0.2s, color 0.2s;
+      }
+
+      html.dark body {
+        background: var(--bg-dark);
+        color: var(--text-dark);
+      }
+
+      /* Smooth transitions for dark mode toggle */
+      * {
+        transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
