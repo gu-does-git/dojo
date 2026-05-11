@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "if": "Bash(git commit*)",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Validate this git commit command follows Conventional Commits format:\n\n$ARGUMENTS\n\nConventional Commits format: type(scope)?: subject\\n\\nbody (optional)\n\nValid types: feat, fix, docs, style, refactor, perf, test, chore, ci, build\n\nExamples:\n- feat(auth): add login validation\n- fix: resolve race condition in drill timer\n- docs: update README with design system\n\nIf the commit message is valid format, respond with:\n{\"decision\": \"allow\", \"reason\": \"Valid Conventional Commit\"}\n\nIf invalid, respond with:\n{\"decision\": \"block\", \"reason\": \"Invalid format. Expected: type(scope)?: subject\"}\n\nONLY respond with JSON, no other text."
+          }
+        ]
+      }
+    ]
+  }
+}
