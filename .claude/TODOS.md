@@ -1,9 +1,9 @@
 # Dojo Implementation TODOs
 
 ## Setup & Configuration
-- [ ] Add Astro integrations (React, UnoCSS, sitemap)
-- [ ] Configure UnoCSS with theme tokens (colors, typography)
-- [ ] Set up Astro 6 font API (Inter + Noto Sans JP)
+- [x] Add Astro integrations (React, UnoCSS, sitemap)
+- [x] Configure UnoCSS with theme tokens (colors, typography)
+- [x] Set up Astro 6 font API (Inter + Noto Sans JP)
 
 ## Layouts & Structure
 - [ ] Create BaseLayout.astro (html shell, fonts, meta)
