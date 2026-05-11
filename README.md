@@ -10,7 +10,7 @@ Dojo is a performance-focused platform for practicing Japanese **grammar** skill
 
 - **Framework**: Astro 6.3 (static-first with interactive islands)
 - **Interactivity**: React islands for drill components
-- **CSS**: UnoCSS (atomic CSS, on-demand)
+- **CSS**: Tailwind CSS v4 (utility-first, zero unused styles)
 - **Fonts**: Astro 6 native font API (Inter + Noto Sans JP)
 - **Design**: Modern SaaS — dark mode first, indigo/purple accents
 - **Deployment**: `japanese.gudoes.dev`
@@ -25,11 +25,11 @@ Grammar learning demands speed. Astro's static-first + interactive islands appro
 
 ## Design System
 
-### Colors (CSS custom properties, light/dark)
-- **Backgrounds**: `--bg` (white / `#0f0f13`)
-- **Surface**: `--surface` (light gray / `#1a1a24`)
-- **Accents**: `--accent` (indigo), `--accent2` (purple)
-- **Feedback**: `--success` (green), `--error` (red)
+### Colors (Tailwind, light/dark)
+- **Backgrounds**: `bg-white dark:bg-slate-950`
+- **Surface**: `bg-slate-100 dark:bg-slate-800`
+- **Accents**: Indigo (`indigo-600 dark:indigo-500`), Purple (`purple-600 dark:purple-500`)
+- **Feedback**: Success (green), Error (red)
 
 ### Typography
 - Inter (UI/Latin), Noto Sans JP (Japanese)
@@ -120,18 +120,17 @@ See [PLAN.md](./PLAN.md) for architecture details and implementation checklist.
 
 ```bash
 bun install
-bunx astro add react sitemap
-bun add -D unocss @unocss/astro
 bun run dev
 ```
 
-Browse `http://localhost:3000`.
+Browse `http://localhost:4321` to see the landing page with drill categories.
 
 ## Integrations Installed
 
 - `@astrojs/react` — React islands
 - `@astrojs/sitemap` — SEO
-- `unocss` + `@unocss/astro` — atomic CSS
+- `@tailwindcss/vite` + `tailwindcss` — Tailwind CSS v4
+- `astro-icon` — Material Design Icons
 - `@astrojs/mdx` (optional) — lesson pages with rich content
 
 ## Deployment
