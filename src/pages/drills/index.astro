@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+
+const drills = await getCollection('drills');
+---
+
+<BaseLayout title="Drills — Dojo" description="All available Japanese grammar drills.">
+  <Header title="Dojo" />
+
+  <main class="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800">
+    <section class="max-w-6xl mx-auto pl-4 pr-4 pt-20 pb-20">
+      <div class="text-center mb-16">
+        <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-4">
+          All Drills
+        </h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          Choose a drill to start practicing Japanese grammar
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {drills.map((drill) => {
+          const href = `/drills/${drill.id}`;
+          const accentColor = drill.data.type === 'conjugation' ? 'indigo' : 'purple';
+
+          return (
+            <a
+              href={href}
+              class={`group relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-${accentColor}-500 dark:hover:border-${accentColor}-400 transition-all hover:shadow-2xl hover:-translate-y-1`}
+            >
+              <div class={`absolute inset-0 bg-gradient-to-br from-${accentColor}-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity`}/>
+              <div class="relative p-8 sm:p-10">
+                <div class="mb-6 inline-block pl-3 pr-3 pt-3 pb-3 rounded-lg" style={`background: var(--${accentColor}-100);`}>
+                  <span class="text-2xl font-bold" style={`color: var(--${accentColor}-600);`}>
+                    {drill.data.type === 'conjugation' ? '動' : '助'}
+                  </span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
+                  {drill.data.title}
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                  {drill.data.description}
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="inline-block pl-4 pr-4 pt-2 pb-2 text-white text-sm font-semibold rounded-full" style={`background: var(--${accentColor}-600);`}>
+                    {drill.data.level}
+                  </span>
+                  <span class="font-semibold" style={`color: var(--${accentColor}-600);`}>→</span>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      {drills.length === 0 && (
+        <div class="text-center py-12">
+          <p class="text-lg text-slate-600 dark:text-slate-400">
+            No drills available yet. Check back soon!
+          </p>
+        </div>
+      )}
+    </section>
+  </main>
+</BaseLayout>

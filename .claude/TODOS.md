@@ -11,13 +11,14 @@
 - [x] Create BaseLayout.astro (html shell, fonts, meta)
 - [x] Create Header component with dark mode toggle and icons
 - [x] Create polished landing page with gradient, drill cards, and stats
-- [ ] Create DrillLayout.astro (extends Base, adds progress nav)
-- [ ] Set up Astro Content Collections with zod schemas
+- [x] Create DrillLayout.astro (extends Base, adds progress nav)
+- [x] Set up Astro Content Collections with glob loader and zod schemas
 
 ## Content & Data
-- [ ] Create drill data files (past-form.json, particles.json)
-- [ ] Populate past-form questions (N5 verbs)
-- [ ] Populate particles questions (は/が/を/に usage)
+- [x] Create drill data files (past-form.json, particles.json)
+- [x] Populate past-form questions (N5 verbs)
+- [x] Populate particles questions (は/が/を/に usage)
+- [x] Install WanaKana.js for romaji→hiragana conversion
 
 ## Components
 - [ ] Build ConjugationDrill.tsx (React island)
@@ -29,9 +30,9 @@
 
 ## Pages
 - [x] Create src/pages/index.astro (landing with drill grid, hero, stats)
-- [ ] Create src/pages/drills/index.astro (all drills index)
-- [ ] Create src/pages/drills/past-form.astro (past tense drill)
-- [ ] Create src/pages/drills/particles.astro (particle drill)
+- [x] Create src/pages/drills/index.astro (all drills index)
+- [x] Create src/pages/drills/past-form.astro (past tense drill)
+- [x] Create src/pages/drills/particles.astro (particle drill)
 - [ ] Create src/pages/404.astro
 
 ## Testing & Deployment

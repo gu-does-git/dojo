@@ -1,0 +1,99 @@
+{
+  "id": "particles-n5",
+  "title": "Particles — N5 Grammar",
+  "description": "Learn は, が, を, に particle usage in context. Understand when and how to use each particle correctly.",
+  "level": "N5",
+  "type": "particles",
+  "questions": [
+    {
+      "prompt": "私___学生です。",
+      "romaji": "Watashi ___ gakusei desu.",
+      "answer": "は",
+      "hint": "Topic marker — identifying the subject"
+    },
+    {
+      "prompt": "猫___ここにいます。",
+      "romaji": "Neko ___ koko ni imasu.",
+      "answer": "が",
+      "hint": "Subject marker — answering 'who/what is here?'"
+    },
+    {
+      "prompt": "水___飲みます。",
+      "romaji": "Mizu ___ nomimasu.",
+      "answer": "を",
+      "hint": "Object marker — direct object of action"
+    },
+    {
+      "prompt": "学校___行きます。",
+      "romaji": "Gakkou ___ ikimasu.",
+      "answer": "に",
+      "hint": "Destination marker — where to go"
+    },
+    {
+      "prompt": "天気___いいですね。",
+      "romaji": "Tenki ___ ii desu ne.",
+      "answer": "は",
+      "hint": "Topic marker — commenting on the weather"
+    },
+    {
+      "prompt": "誰___来ましたか？",
+      "romaji": "Dare ___ kimashita ka?",
+      "answer": "が",
+      "hint": "Subject marker — answering 'who came?'"
+    },
+    {
+      "prompt": "毎日、日本語___勉強します。",
+      "romaji": "Mainichi, nihongo ___ benkyou shimasu.",
+      "answer": "を",
+      "hint": "Object marker — what subject to study"
+    },
+    {
+      "prompt": "公園___友達___会いました。",
+      "romaji": "Kouen ___ tomodachi ___ aimashita.",
+      "answer": "で",
+      "hint": "Location marker — where the action took place"
+    },
+    {
+      "prompt": "妹___兄___好きです。",
+      "romaji": "Imouto ___ ani ___ suki desu.",
+      "answer": "は",
+      "hint": "Topic marker — about the younger sister's preference"
+    },
+    {
+      "prompt": "コーヒー___好きですか？",
+      "romaji": "Koohii ___ suki desu ka?",
+      "answer": "は",
+      "hint": "Topic marker — question about coffee"
+    },
+    {
+      "prompt": "昨日、テレビ___見ました。",
+      "romaji": "Kinou, terebi ___ mimashita.",
+      "answer": "を",
+      "hint": "Object marker — what did you watch"
+    },
+    {
+      "prompt": "病院___働いています。",
+      "romaji": "Byouin ___ hataraite imasu.",
+      "answer": "で",
+      "hint": "Location marker — where someone works"
+    },
+    {
+      "prompt": "誰___一番背が高いですか？",
+      "romaji": "Dare ___ ichiban se ga takai desu ka?",
+      "answer": "が",
+      "hint": "Subject marker — asking 'who is the tallest'"
+    },
+    {
+      "prompt": "明日、映画___見に行きます。",
+      "romaji": "Ashita, eiga ___ mi ni ikimasu.",
+      "answer": "を",
+      "hint": "Object marker — what movie to watch"
+    },
+    {
+      "prompt": "東京___住んでいます。",
+      "romaji": "Toukyou ___ sunde imasu.",
+      "answer": "に",
+      "hint": "Location marker — where someone lives/resides"
+    }
+  ]
+}

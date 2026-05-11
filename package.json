@@ -21,7 +21,8 @@
     "astro-icon": "^1.1.5",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.0",
+    "wanakana": "^5.3.1"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",

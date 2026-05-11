@@ -1,8 +1,9 @@
 import { defineCollection } from 'astro:content';
-import { z } from 'zod';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const drillsCollection = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.json', base: './src/content/drills' }),
   schema: z.object({
     id: z.string(),
     title: z.string(),

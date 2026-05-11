@@ -1,0 +1,117 @@
+{
+  "id": "past-form-n5",
+  "title": "Past Form — N5 Verbs",
+  "description": "Master past tense conjugation for N5 verbs. Learn group 1, 2, and irregular conjugations with instant feedback.",
+  "level": "N5",
+  "type": "conjugation",
+  "questions": [
+    {
+      "prompt": "書く",
+      "romaji": "kaku",
+      "answer": "書いた",
+      "hint": "Group 1 verb ending in く → いた"
+    },
+    {
+      "prompt": "飲む",
+      "romaji": "nomu",
+      "answer": "飲んだ",
+      "hint": "Group 1 verb ending in む → んだ"
+    },
+    {
+      "prompt": "話す",
+      "romaji": "hanasu",
+      "answer": "話した",
+      "hint": "Group 1 verb ending in す → した"
+    },
+    {
+      "prompt": "読む",
+      "romaji": "yomu",
+      "answer": "読んだ",
+      "hint": "Group 1 verb ending in む → んだ"
+    },
+    {
+      "prompt": "聞く",
+      "romaji": "kiku",
+      "answer": "聞いた",
+      "hint": "Group 1 verb ending in く → いた"
+    },
+    {
+      "prompt": "行く",
+      "romaji": "iku",
+      "answer": "行った",
+      "hint": "Group 1 verb ending in く but irregular: いった"
+    },
+    {
+      "prompt": "買う",
+      "romaji": "kau",
+      "answer": "買った",
+      "hint": "Group 1 verb ending in う → った"
+    },
+    {
+      "prompt": "待つ",
+      "romaji": "matsu",
+      "answer": "待った",
+      "hint": "Group 1 verb ending in つ → った"
+    },
+    {
+      "prompt": "帰る",
+      "romaji": "kaeru",
+      "answer": "帰った",
+      "hint": "Group 1 verb ending in る → った"
+    },
+    {
+      "prompt": "急ぐ",
+      "romaji": "isogu",
+      "answer": "急いだ",
+      "hint": "Group 1 verb ending in ぐ → いだ"
+    },
+    {
+      "prompt": "食べる",
+      "romaji": "taberu",
+      "answer": "食べた",
+      "hint": "Group 2 verb ending in る → た"
+    },
+    {
+      "prompt": "見る",
+      "romaji": "miru",
+      "answer": "見た",
+      "hint": "Group 2 verb ending in る → た"
+    },
+    {
+      "prompt": "起きる",
+      "romaji": "okiru",
+      "answer": "起きた",
+      "hint": "Group 2 verb ending in る → た"
+    },
+    {
+      "prompt": "教える",
+      "romaji": "oshieru",
+      "answer": "教えた",
+      "hint": "Group 2 verb ending in る → た"
+    },
+    {
+      "prompt": "寝る",
+      "romaji": "neru",
+      "answer": "寝た",
+      "hint": "Group 2 verb ending in る → た"
+    },
+    {
+      "prompt": "する",
+      "romaji": "suru",
+      "answer": "した",
+      "hint": "Irregular verb"
+    },
+    {
+      "prompt": "来る",
+      "romaji": "kuru",
+      "answer": "来た",
+      "hint": "Irregular verb"
+    },
+    {
+      "prompt": "ある",
+      "romaji": "aru",
+      "answer": "あった",
+      "hint": "Irregular verb"
+    }
+  ]
+}
