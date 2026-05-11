@@ -112,6 +112,10 @@ src/
     └── 404.astro
 ```
 
+## Implementation Progress
+
+See [PLAN.md](./PLAN.md) for architecture details and implementation checklist.
+
 ## Getting Started
 
 ```bash
