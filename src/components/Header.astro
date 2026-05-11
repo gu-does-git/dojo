@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 interface Props {
   title?: string;
 }
@@ -6,17 +8,25 @@ interface Props {
 const { title = 'Dojo' } = Astro.props;
 ---
 
-<header class="bg-light-surface dark:bg-dark-surface border-b border-light-border dark:border-dark-border sticky top-0 z-50">
-  <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/" class="text-lg font-semibold text-light-text dark:text-dark-text hover:text-accent transition">
-      {title}
+<header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
+  <div class="max-w-4xl mx-auto flex items-center justify-between" style="padding-left: 1rem; padding-right: 1rem; padding-top: 0.75rem; padding-bottom: 0.75rem;">
+    {/* Logo + Title */}
+    <a href="/" class="flex items-center gap-2 text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition group">
+      <div class="rounded-lg bg-indigo-600 dark:bg-indigo-500 group-hover:scale-110 transition" style="padding: 0.5rem;">
+        <Icon name="mdi:school" size={24} class="text-white" />
+      </div>
+      <span class="text-lg font-bold hidden sm:inline">{title}</span>
     </a>
+
+    {/* Dark mode toggle */}
     <button
       onclick="toggleDarkMode()"
-      class="px-4 py-2 rounded-lg border border-light-border dark:border-dark-border bg-white dark:bg-dark-surface text-light-text dark:text-dark-text hover:bg-light-surface dark:hover:bg-dark-surface transition text-sm font-medium"
+      class="rounded-full cursor-pointer p-2 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white transition-all hover:scale-110 active:scale-95 flex items-center justify-center"
       title="Toggle dark mode"
+      id="theme-toggle"
     >
-      🌙
+      <Icon name="mdi:moon-waning-crescent" size={20} class="hidden dark:block" />
+      <Icon name="mdi:weather-sunny" size={20} class="dark:hidden" />
     </button>
   </div>
 </header>
@@ -24,42 +34,22 @@ const { title = 'Dojo' } = Astro.props;
 <script>
   function toggleDarkMode() {
     const html = document.documentElement;
-    html.classList.toggle('dark');
-    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    const isNowDark = html.classList.toggle('dark');
+    localStorage.setItem('theme', isNowDark ? 'dark' : 'light');
+    updateThemeIcon(isNowDark);
   }
 
-  // Initialize theme from localStorage or system preference
-  const saved = localStorage.getItem('theme');
-  const isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
-  if (isDark) document.documentElement.classList.add('dark');
+  function updateThemeIcon(isDark: boolean) {
+    const icon = document.querySelector('.theme-icon') as any;
+    if (icon) {
+      icon.setAttribute('name', isDark ? 'mdi:white-balance-sunny' : 'mdi:moon-waning-crescent');
+    }
+  }
+
+  // Update icon on page load (dark mode already set in BaseLayout head)
+  const isDark = document.documentElement.classList.contains('dark');
+  updateThemeIcon(isDark);
 
   // Make available globally
   (window as any).toggleDarkMode = toggleDarkMode;
 </script>
-
-<style is:global>
-  .bg-light-surface {
-    background: var(--surface-light);
-  }
-  html.dark .bg-light-surface {
-    background: var(--surface-dark);
-  }
-
-  .border-light-border {
-    border-color: var(--border-light);
-  }
-  html.dark .border-light-border {
-    border-color: var(--border-dark);
-  }
-
-  .text-light-text {
-    color: var(--text-light);
-  }
-  html.dark .text-light-text {
-    color: var(--text-dark);
-  }
-
-  .bg-dark-surface {
-    background: var(--surface-dark);
-  }
-</style>
