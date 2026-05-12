@@ -27,3 +27,4 @@ pnpm-debug.log*
 .claude/settings.local.json
 # repo context memory file (not committed)
 repo-context.md
+IMPROVEMENTS.md
