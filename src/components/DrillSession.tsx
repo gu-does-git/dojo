@@ -126,11 +126,11 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
   // ─── Complete screen ───
   if (phase === 'complete') {
     return (
-      <div className="text-center py-16 animate-slide-up">
+      <div className="text-center py-8 sm:py-16 animate-slide-up">
         <div className="text-6xl mb-4">🏯</div>
         <h2 className="font-display text-3xl font-bold tracking-tight mb-2">Drill Complete</h2>
         <p className="text-base text-fg-secondary mb-8">Here's how you did.</p>
-        <div className="flex justify-center gap-8 mb-8">
+        <div className="flex justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-success tabular-nums">{score}</div>
             <div className="text-sm text-muted">Correct</div>
@@ -148,7 +148,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
         {/* Question History */}
         <div className="space-y-3 max-w-lg mx-auto mb-8 text-left">
           <h3 className="text-base font-semibold text-fg">Review</h3>
-          <div className="space-y-1.5 max-h-80 overflow-y-auto p-3 rounded-lg border border-border bg-surface/30">
+          <div className="space-y-1.5 max-h-60 sm:max-h-80 overflow-y-auto p-3 rounded-lg border border-border bg-surface/30">
             {results.map((r, i) => (
               <div key={i} className="p-3 rounded-lg bg-surface/50 border border-border space-y-1.5">
                 <div className="flex items-start justify-between gap-3">
@@ -173,7 +173,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
           </div>
         </div>
 
-        <div className="flex gap-2 justify-center">
+        <div className="flex flex-col sm:flex-row gap-2 sm:justify-center">
           <button onClick={handleRestart}
             className="px-7 py-3 bg-accent text-white rounded-lg text-base font-semibold hover:brightness-112 transition-all">
             Redo Drill
@@ -191,7 +191,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
   return (
     <div className="animate-fade-in">
       {/* Progress Bar */}
-      <div className="flex items-center gap-3.5 pt-7 pb-5">
+      <div className="flex items-center gap-3.5 pt-4 pb-3 sm:pt-7 sm:pb-5">
         <a href="/drills" className="text-sm text-muted font-medium hover:text-fg transition-colors no-underline shrink-0">
           ← Back
         </a>
@@ -213,7 +213,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
           </span>
           あ Furigana
         </button>
-        <div className="w-px h-4 bg-border-strong mx-0.5" />
+        <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
         {drillType !== 'particles' && (
           <>
             <button onClick={() => { handleRestart(); setReversed(v => !v); }}
@@ -223,7 +223,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
               </span>
               ⇄ Reverse
             </button>
-            <div className="w-px h-4 bg-border-strong mx-0.5" />
+            <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
           </>
         )}
         <button onClick={() => setShowRomaji(v => !v)}
@@ -235,7 +235,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
         </button>
         {cheatsheetUrl && (
           <>
-            <div className="w-px h-4 bg-border-strong mx-0.5" />
+            <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
             <a href={cheatsheetUrl} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium text-muted hover:text-fg-secondary hover:bg-surface-2 transition-all no-underline">
               🕮 Cheatsheet
@@ -247,7 +247,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
       {phase === 'answering' && (
         <>
           {/* Question Card */}
-          <div className="bg-surface border border-border rounded-lg p-9 mb-5">
+          <div className="bg-surface border border-border rounded-lg p-5 sm:p-9 mb-5">
             <div className="flex items-center gap-2 mb-5">
               {currentQuestion.difficulty && (
                 <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${
@@ -258,7 +258,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
               )}
               <span className="text-xs text-muted tabular-nums ml-auto">Q{currentIdx + 1}</span>
             </div>
-            <div className="font-display text-3xl sm:text-4xl leading-tight mb-3">
+            <div className="font-display text-2xl sm:text-4xl leading-tight mb-3">
               {currentQuestion.reading
                 ? (() => {
                     const promptParts = displayPrompt.split('___');
@@ -291,7 +291,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
           <div className="mb-5">
             <input ref={inputRef} type="text" defaultValue={input} onKeyDown={handleKeyDown}
               placeholder="Type your answer…"
-              className="w-full px-4 py-3.5 text-xl bg-surface-2 border-2 border-border-strong rounded-lg text-fg placeholder:text-muted outline-none focus:border-accent transition-colors" />
+              className="w-full px-4 py-3.5 text-lg sm:text-xl bg-surface-2 border-2 border-border-strong rounded-lg text-fg placeholder:text-muted outline-none focus:border-accent transition-colors" />
           </div>
 
           {/* Actions */}

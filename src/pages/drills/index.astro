@@ -10,7 +10,7 @@ const drills = await getCollection('drills');
   <Header current="drills" />
 
   <main>
-    <section class="max-w-5xl mx-auto px-6 pt-10 pb-20">
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-20">
       {/* Page Header */}
       <div class="mb-6">
         <h1 class="font-display text-3xl font-bold tracking-tight mb-1.5">All Drills</h1>
@@ -18,18 +18,18 @@ const drills = await getCollection('drills');
       </div>
 
       {/* Filter Bar */}
-      <div class="flex items-center gap-2 mb-6 flex-wrap">
-        <button class="filter-pill text-sm px-3.5 py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="all">All</button>
-        <button class="filter-pill text-sm px-3.5 py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="conjugation">Grammar</button>
-        <button class="filter-pill text-sm px-3.5 py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="particles">Particles</button>
-        <button class="filter-pill text-sm px-3.5 py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="n5">N5</button>
-        <button class="filter-pill text-sm px-3.5 py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="n4">N4</button>
-        <button class="filter-pill text-sm px-3.5 py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="n3">N3</button>
+      <div class="flex items-center gap-1.5 sm:gap-2 mb-6 flex-wrap">
+        <button class="filter-pill text-xs px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="all">All</button>
+        <button class="filter-pill text-xs px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="conjugation">Grammar</button>
+        <button class="filter-pill text-xs px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="particles">Particles</button>
+        <button class="filter-pill text-xs px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="n5">N5</button>
+        <button class="filter-pill text-xs px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="n4">N4</button>
+        <button class="filter-pill text-xs px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-border-strong bg-transparent text-fg-secondary cursor-pointer font-medium transition-all hover:border-muted hover:text-fg" data-filter="n3">N3</button>
         <input
           type="text"
           id="searchInput"
           placeholder="Search drills…"
-          class="ml-auto px-3.5 py-1.5 rounded-full border border-border-strong bg-surface text-fg text-sm outline-none min-w-45 focus:border-accent transition-colors placeholder:text-muted"
+          class="px-3.5 mt-2 sm:mt-0 sm:ml-auto sm:px-3.5 py-1.5 rounded-full border border-border-strong bg-surface text-fg text-sm outline-none w-full sm:min-w-45 focus:border-accent transition-colors placeholder:text-muted"
         />
       </div>
 
@@ -41,7 +41,7 @@ const drills = await getCollection('drills');
           return (
             <a
               href={`/drills/${drill.id}`}
-              class="drill-row flex items-center gap-4 px-5 py-4 bg-surface border border-border rounded-lg hover:border-accent-mid hover:bg-surface-2 transition-all no-underline text-fg group"
+              class="drill-row flex items-center gap-4 px-4 py-3 sm:px-5 sm:py-4 bg-surface border border-border rounded-lg hover:border-accent-mid hover:bg-surface-2 transition-all no-underline text-fg group"
               data-category={drill.data.type}
               data-level={drill.data.level.toLowerCase()}
               data-title={drill.data.title.toLowerCase()}
@@ -65,10 +65,10 @@ const drills = await getCollection('drills');
                 </div>
                 <p class="text-sm text-muted truncate">{drill.data.description}</p>
               </div>
-              <div class="flex items-center gap-2 text-sm text-muted">
+              <div class="hidden md:flex items-center gap-2 text-sm text-muted">
                 <span>{drill.data.questions.length} questions</span>
               </div>
-              <span class="text-base text-muted transition-colors drill-row-arrow">→</span>
+              <span class="hidden md:inline text-base text-muted transition-colors drill-row-arrow">→</span>
             </a>
           );
         })}
@@ -83,7 +83,7 @@ const drills = await getCollection('drills');
     </section>
 
     <footer class="border-t border-border">
-      <div class="max-w-5xl mx-auto px-6 py-10 text-center">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 text-center">
         <p class="text-sm text-muted">Dojo — Interactive Japanese Grammar Learning</p>
       </div>
     </footer>
