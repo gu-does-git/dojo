@@ -149,6 +149,285 @@
       "answerRomaji": "atta",
       "difficulty": "N4",
       "hint": "Irregular verb"
+    },
+    {
+      "prompt": "食べる",
+      "reading": "たべる",
+      "romaji": "taberu",
+      "answer": "食べた",
+      "answerRomaji": "tabeta",
+      "difficulty": "N5",
+      "hint": "Plain past of taberu"
+    },
+    {
+      "prompt": "飲む",
+      "reading": "のむ",
+      "romaji": "nomu",
+      "answer": "飲んだ",
+      "answerRomaji": "nonda",
+      "difficulty": "N5",
+      "hint": "Plain past of nomu"
+    },
+    {
+      "prompt": "書く",
+      "reading": "かく",
+      "romaji": "kaku",
+      "answer": "書いた",
+      "answerRomaji": "kaita",
+      "difficulty": "N5",
+      "hint": "Plain past of kaku"
+    },
+    {
+      "prompt": "読む",
+      "reading": "よむ",
+      "romaji": "yomu",
+      "answer": "読んだ",
+      "answerRomaji": "yonda",
+      "difficulty": "N5",
+      "hint": "Plain past of yomu"
+    },
+    {
+      "prompt": "行く",
+      "reading": "いく",
+      "romaji": "iku",
+      "answer": "行った",
+      "answerRomaji": "itta",
+      "difficulty": "N5",
+      "hint": "Plain past of iku"
+    },
+    {
+      "prompt": "する",
+      "reading": "する",
+      "romaji": "suru",
+      "answer": "した",
+      "answerRomaji": "shita",
+      "difficulty": "N5",
+      "hint": "Plain past of suru"
+    },
+    {
+      "prompt": "見る",
+      "reading": "みる",
+      "romaji": "miru",
+      "answer": "見た",
+      "answerRomaji": "mita",
+      "difficulty": "N5",
+      "hint": "Plain past of miru"
+    },
+    {
+      "prompt": "買う",
+      "reading": "かう",
+      "romaji": "kau",
+      "answer": "買った",
+      "answerRomaji": "katta",
+      "difficulty": "N5",
+      "hint": "Plain past of kau"
+    },
+    {
+      "prompt": "撮る",
+      "reading": "とる",
+      "romaji": "toru",
+      "answer": "撮った",
+      "answerRomaji": "totta",
+      "difficulty": "N5",
+      "hint": "Plain past of toru"
+    },
+    {
+      "prompt": "遊ぶ",
+      "reading": "あそぶ",
+      "romaji": "asobu",
+      "answer": "遊んだ",
+      "answerRomaji": "asonde",
+      "difficulty": "N5",
+      "hint": "Plain past of asobu"
+    },
+    {
+      "prompt": "聞く",
+      "reading": "きく",
+      "romaji": "kiku",
+      "answer": "聞いた",
+      "answerRomaji": "kiita",
+      "difficulty": "N5",
+      "hint": "Plain past of kiku"
+    },
+    {
+      "prompt": "言う",
+      "reading": "いう",
+      "romaji": "iu",
+      "answer": "言った",
+      "answerRomaji": "itta",
+      "difficulty": "N5",
+      "hint": "Plain past of iu"
+    },
+    {
+      "prompt": "食べる",
+      "reading": "たべる",
+      "romaji": "taberu",
+      "answer": "食べなかった",
+      "answerRomaji": "tabenakatta",
+      "difficulty": "N5",
+      "hint": "Negative past of taberu"
+    },
+    {
+      "prompt": "行く",
+      "reading": "いく",
+      "romaji": "iku",
+      "answer": "行かなかった",
+      "answerRomaji": "ikanakatta",
+      "difficulty": "N5",
+      "hint": "Negative past of iku"
+    },
+    {
+      "prompt": "する",
+      "reading": "する",
+      "romaji": "suru",
+      "answer": "しなかった",
+      "answerRomaji": "shinakatta",
+      "difficulty": "N5",
+      "hint": "Negative past of suru"
+    },
+    {
+      "prompt": "分かる",
+      "reading": "わかる",
+      "romaji": "wakaru",
+      "answer": "分かった",
+      "answerRomaji": "wakatta",
+      "difficulty": "N4",
+      "hint": "Plain past of wakaru"
+    },
+    {
+      "prompt": "始める",
+      "reading": "はじめめる",
+      "romaji": "hajimeru",
+      "answer": "始めた",
+      "answerRomaji": "hajimeta",
+      "difficulty": "N4",
+      "hint": "Plain past of hajimeru"
+    },
+    {
+      "prompt": "迷う",
+      "reading": "まよう",
+      "romaji": "mayou",
+      "answer": "迷った",
+      "answerRomaji": "mayotta",
+      "difficulty": "N4",
+      "hint": "Plain past of mayou"
+    },
+    {
+      "prompt": "止める",
+      "reading": "とめる",
+      "romaji": "tomeru",
+      "answer": "止めた",
+      "answerRomaji": "tometa",
+      "difficulty": "N4",
+      "hint": "Plain past of tomeru"
+    },
+    {
+      "prompt": "変える",
+      "reading": "かえる",
+      "romaji": "kaeru",
+      "answer": "変えた",
+      "answerRomaji": "kaeta",
+      "difficulty": "N4",
+      "hint": "Plain past of kaeru"
+    },
+    {
+      "prompt": "着る",
+      "reading": "きれい",
+      "romaji": "kiru",
+      "answer": "着た",
+      "answerRomaji": "kita",
+      "difficulty": "N4",
+      "hint": "Plain past of kiru"
+    },
+    {
+      "prompt": "得る",
+      "reading": "える",
+      "romaji": "eru",
+      "answer": "得た",
+      "answerRomaji": "eta",
+      "difficulty": "N4",
+      "hint": "Plain past of eru"
+    },
+    {
+      "prompt": "出る",
+      "reading": "でる",
+      "romaji": "deru",
+      "answer": "出た",
+      "answerRomaji": "deta",
+      "difficulty": "N4",
+      "hint": "Plain past of deru"
+    },
+    {
+      "prompt": "忘れる",
+      "reading": "わすれる",
+      "romaji": "wasureru",
+      "answer": "忘れた",
+      "answerRomaji": "wasureta",
+      "difficulty": "N4",
+      "hint": "Plain past of wasureru"
+    },
+    {
+      "prompt": "借ります",
+      "reading": "かかります",
+      "romaji": "karimasu",
+      "answer": "借りました",
+      "answerRomaji": "karimashita",
+      "difficulty": "N4",
+      "hint": "Masu past"
+    },
+    {
+      "prompt": "送ります",
+      "reading": "おくります",
+      "romaji": "okurimasu",
+      "answer": "送りました",
+      "answerRomaji": "okurimashita",
+      "difficulty": "N4",
+      "hint": "Masu past"
+    },
+    {
+      "prompt": "泊まります",
+      "reading": "とまります",
+      "romaji": "tomarimasu",
+      "answer": "泊まりました",
+      "answerRomaji": "tomarimashita",
+      "difficulty": "N4",
+      "hint": "Masu past"
+    },
+    {
+      "prompt": "話しかける",
+      "reading": "はなしかける",
+      "romaji": "hanashikakeru",
+      "answer": "話しかけた",
+      "answerRomaji": "hanashikaketa",
+      "difficulty": "N3",
+      "hint": "Plain past of hanashikakeru"
+    },
+    {
+      "prompt": "飛び込む",
+      "reading": "とびこむ",
+      "romaji": "tobikomu",
+      "answer": "飛び込んだ",
+      "answerRomaji": "tobikonda",
+      "difficulty": "N3",
+      "hint": "Plain past of tobikomu"
+    },
+    {
+      "prompt": "出掛ける",
+      "reading": "でかける",
+      "romaji": "dekakeru",
+      "answer": "出掛けた",
+      "answerRomaji": "dekaketa",
+      "difficulty": "N3",
+      "hint": "Plain past of dekakeru"
+    },
+    {
+      "prompt": "乗り越える",
+      "reading": "のりこえる",
+      "romaji": "norikoeru",
+      "answer": "乗り越えた",
+      "answerRomaji": "norikoeta",
+      "difficulty": "N3",
+      "hint": "Plain past of norikoeru"
     }
   ]
 }
