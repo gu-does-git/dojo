@@ -4,113 +4,150 @@
   "description": "Master past tense conjugation for N5 verbs. Learn group 1, 2, and irregular conjugations with instant feedback.",
   "level": "N5",
   "type": "conjugation",
+  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/verb-past-tense-ta-form/",
   "questions": [
     {
       "prompt": "書く",
       "romaji": "kaku",
       "answer": "書いた",
+      "answerRomaji": "kaita",
+      "difficulty": "N5",
       "hint": "Group 1 verb ending in く → いた"
     },
     {
       "prompt": "飲む",
       "romaji": "nomu",
       "answer": "飲んだ",
+      "answerRomaji": "nonda",
+      "difficulty": "N5",
       "hint": "Group 1 verb ending in む → んだ"
     },
     {
       "prompt": "話す",
       "romaji": "hanasu",
       "answer": "話した",
+      "answerRomaji": "hanashita",
+      "difficulty": "N5",
       "hint": "Group 1 verb ending in す → した"
     },
     {
       "prompt": "読む",
       "romaji": "yomu",
       "answer": "読んだ",
+      "answerRomaji": "yonda",
+      "difficulty": "N5",
       "hint": "Group 1 verb ending in む → んだ"
     },
     {
       "prompt": "聞く",
       "romaji": "kiku",
       "answer": "聞いた",
+      "answerRomaji": "kiita",
+      "difficulty": "N5",
       "hint": "Group 1 verb ending in く → いた"
     },
     {
       "prompt": "行く",
       "romaji": "iku",
       "answer": "行った",
+      "answerRomaji": "itta",
+      "difficulty": "N4",
       "hint": "Group 1 verb ending in く but irregular: いった"
     },
     {
       "prompt": "買う",
       "romaji": "kau",
       "answer": "買った",
+      "answerRomaji": "katta",
+      "difficulty": "N4",
       "hint": "Group 1 verb ending in う → った"
     },
     {
       "prompt": "待つ",
       "romaji": "matsu",
       "answer": "待った",
+      "answerRomaji": "matta",
+      "difficulty": "N4",
       "hint": "Group 1 verb ending in つ → った"
     },
     {
       "prompt": "帰る",
       "romaji": "kaeru",
       "answer": "帰った",
+      "answerRomaji": "kaetta",
+      "difficulty": "N4",
       "hint": "Group 1 verb ending in る → った"
     },
     {
       "prompt": "急ぐ",
       "romaji": "isogu",
       "answer": "急いだ",
+      "answerRomaji": "isoida",
+      "difficulty": "N4",
       "hint": "Group 1 verb ending in ぐ → いだ"
     },
     {
       "prompt": "食べる",
       "romaji": "taberu",
       "answer": "食べた",
+      "answerRomaji": "tabeta",
+      "difficulty": "N5",
       "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "見る",
       "romaji": "miru",
       "answer": "見た",
+      "answerRomaji": "mita",
+      "difficulty": "N5",
       "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "起きる",
       "romaji": "okiru",
       "answer": "起きた",
+      "answerRomaji": "okita",
+      "difficulty": "N5",
       "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "教える",
       "romaji": "oshieru",
       "answer": "教えた",
+      "answerRomaji": "oshieta",
+      "difficulty": "N5",
       "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "寝る",
       "romaji": "neru",
       "answer": "寝た",
+      "answerRomaji": "neta",
+      "difficulty": "N5",
       "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "する",
       "romaji": "suru",
       "answer": "した",
+      "answerRomaji": "shita",
+      "difficulty": "N4",
       "hint": "Irregular verb"
     },
     {
       "prompt": "来る",
       "romaji": "kuru",
       "answer": "来た",
+      "answerRomaji": "kita",
+      "difficulty": "N4",
       "hint": "Irregular verb"
     },
     {
       "prompt": "ある",
       "romaji": "aru",
       "answer": "あった",
+      "answerRomaji": "atta",
+      "difficulty": "N4",
       "hint": "Irregular verb"
     }
   ]

@@ -9,24 +9,32 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.4",
     "@astrojs/sitemap": "^3.7.2",
+    "@iconify/react": "^6.0.2",
     "@tailwindcss/vite": "^4.3.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "astro": "^6.3.1",
     "astro-icon": "^1.1.5",
+    "canvas-confetti": "^1.9.4",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-furi": "^2.0.2",
     "tailwindcss": "^4.3.0",
     "wanakana": "^5.3.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
     "@iconify-json/mdi": "^1.2.3",
+    "@types/canvas-confetti": "^1.9.0",
     "@unocss/astro": "^66.6.8",
+    "husky": "^9.1.7",
     "unocss": "^66.6.8"
   }
 }

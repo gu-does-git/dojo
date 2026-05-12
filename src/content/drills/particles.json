@@ -4,95 +4,141 @@
   "description": "Learn は, が, を, に particle usage in context. Understand when and how to use each particle correctly.",
   "level": "N5",
   "type": "particles",
+  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/particles/",
   "questions": [
     {
       "prompt": "私___学生です。",
+      "reading": "わたし___がくせいです。",
       "romaji": "Watashi ___ gakusei desu.",
       "answer": "は",
+      "answerRomaji": "ha",
+      "difficulty": "N5",
       "hint": "Topic marker — identifying the subject"
     },
     {
       "prompt": "猫___ここにいます。",
+      "reading": "ねこ___ここにいます。",
       "romaji": "Neko ___ koko ni imasu.",
       "answer": "が",
+      "answerRomaji": "ga",
+      "difficulty": "N5",
       "hint": "Subject marker — answering 'who/what is here?'"
     },
     {
       "prompt": "水___飲みます。",
+      "reading": "みず___のみます。",
       "romaji": "Mizu ___ nomimasu.",
       "answer": "を",
+      "answerRomaji": "wo",
+      "difficulty": "N5",
       "hint": "Object marker — direct object of action"
     },
     {
       "prompt": "学校___行きます。",
+      "reading": "がっこう___いきます。",
       "romaji": "Gakkou ___ ikimasu.",
       "answer": "に",
+      "answerRomaji": "ni",
+      "difficulty": "N5",
       "hint": "Destination marker — where to go"
     },
     {
       "prompt": "天気___いいですね。",
+      "reading": "てんき___いいですね。",
       "romaji": "Tenki ___ ii desu ne.",
       "answer": "は",
+      "answerRomaji": "ha",
+      "difficulty": "N5",
       "hint": "Topic marker — commenting on the weather"
     },
     {
       "prompt": "誰___来ましたか？",
+      "reading": "だれ___きましたか？",
       "romaji": "Dare ___ kimashita ka?",
       "answer": "が",
+      "answerRomaji": "ga",
+      "difficulty": "N5",
       "hint": "Subject marker — answering 'who came?'"
     },
     {
       "prompt": "毎日、日本語___勉強します。",
+      "reading": "まいにち、にほんご___べんきょうします。",
       "romaji": "Mainichi, nihongo ___ benkyou shimasu.",
       "answer": "を",
+      "answerRomaji": "wo",
+      "difficulty": "N5",
       "hint": "Object marker — what subject to study"
     },
     {
       "prompt": "公園___友達___会いました。",
+      "reading": "こうえん___ともだち___あいました。",
       "romaji": "Kouen ___ tomodachi ___ aimashita.",
       "answer": "で",
+      "answerRomaji": "de",
+      "difficulty": "N4",
       "hint": "Location marker — where the action took place"
     },
     {
       "prompt": "妹___兄___好きです。",
+      "reading": "いもうと___あに___すきです。",
       "romaji": "Imouto ___ ani ___ suki desu.",
       "answer": "は",
+      "answerRomaji": "ha",
+      "difficulty": "N4",
       "hint": "Topic marker — about the younger sister's preference"
     },
     {
       "prompt": "コーヒー___好きですか？",
+      "reading": "コーヒー___すきですか？",
       "romaji": "Koohii ___ suki desu ka?",
       "answer": "は",
+      "answerRomaji": "ha",
+      "difficulty": "N5",
       "hint": "Topic marker — question about coffee"
     },
     {
       "prompt": "昨日、テレビ___見ました。",
+      "reading": "きのう、テレビ___みました。",
       "romaji": "Kinou, terebi ___ mimashita.",
       "answer": "を",
+      "answerRomaji": "wo",
+      "difficulty": "N5",
       "hint": "Object marker — what did you watch"
     },
     {
       "prompt": "病院___働いています。",
+      "reading": "びょういん___はたらいています。",
       "romaji": "Byouin ___ hataraite imasu.",
       "answer": "で",
+      "answerRomaji": "de",
+      "difficulty": "N4",
       "hint": "Location marker — where someone works"
     },
     {
       "prompt": "誰___一番背が高いですか？",
+      "reading": "だれ___いちばんせがたかいですか？",
       "romaji": "Dare ___ ichiban se ga takai desu ka?",
       "answer": "が",
+      "answerRomaji": "ga",
+      "difficulty": "N4",
       "hint": "Subject marker — asking 'who is the tallest'"
     },
     {
       "prompt": "明日、映画___見に行きます。",
+      "reading": "あした、えいが___みにいきます。",
       "romaji": "Ashita, eiga ___ mi ni ikimasu.",
       "answer": "を",
+      "answerRomaji": "wo",
+      "difficulty": "N4",
       "hint": "Object marker — what movie to watch"
     },
     {
       "prompt": "東京___住んでいます。",
+      "reading": "とうきょう___すんでいます。",
       "romaji": "Toukyou ___ sunde imasu.",
       "answer": "に",
+      "answerRomaji": "ni",
+      "difficulty": "N5",
       "hint": "Location marker — where someone lives/resides"
     }
   ]

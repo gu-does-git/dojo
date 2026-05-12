@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import DrillLayout from '../../layouts/DrillLayout.astro';
+import DrillSession from '../../components/DrillSession';
+
+export async function getStaticPaths() {
+  const drills = await getCollection('drills');
+  return drills.map(drill => ({
+    params: { slug: drill.id },
+    props: { drill },
+  }));
+}
+
+interface Props {
+  drill: any;
+}
+
+const { slug } = Astro.params;
+const { drill } = Astro.props;
+
+if (!drill) {
+  return Astro.redirect('/drills');
+}
+
+// Shuffle questions on the server
+const shuffledQuestions = drill.data?.questions ? [...drill.data.questions].sort(() => Math.random() - 0.5) : [];
+---
+
+<DrillLayout title={drill.data?.title || 'Drill'}>
+  <DrillSession client:load questions={shuffledQuestions} cheatsheetUrl={drill.data?.cheatsheetUrl} drillType={drill.data?.type} />
+</DrillLayout>

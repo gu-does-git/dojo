@@ -13,8 +13,11 @@ const drillsCollection = defineCollection({
     questions: z.array(
       z.object({
         prompt: z.string(),
+        reading: z.string().optional(),
         romaji: z.string(),
         answer: z.string(),
+        answerRomaji: z.string(),
+        difficulty: z.enum(['N5', 'N4', 'N3', 'N2', 'N1']).optional(),
         hint: z.string().optional(),
       })
     ),

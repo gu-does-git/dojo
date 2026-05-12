@@ -72,3 +72,26 @@ body {
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .duration-500 {
+    animation-duration: 0.5s;
+  }
+}
