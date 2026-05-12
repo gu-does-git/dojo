@@ -1,5 +1,4 @@
 # Dojo TODOs
-
 ## Done ✅
 - [x] Dark-only warm-tone design system (#1a1816 bg, #5b6abf accent, #b8952f gold)
 - [x] Kiwi Maru font for Japanese text
@@ -15,9 +14,18 @@
 - [x] Client-side filtering on drills page (type, level, search)
 - [x] URL query param support for drill filters
 - [x] Furigana color update to design system tokens
+- [x] Keyboard shortcuts (r=reverse, f=furigana, o=romaji)
+- [x] Hydration loading state (LoaderSVG spinner before mount)
+- [x] te-form.json drill content
+- [x] Multiple font loading (Newsreader, Inter, JetBrains Mono, Kiwi Maru)
+- [x] Husky + commitlint setup (commit-msg + pre-commit hooks)
+- [x] TypeScript strict mode (astro/tsconfigs/strict)
+- [x] Sitemap generation (@astrojs/sitemap)
+- [x] astro-icon integration
 
 ## Future Work 🔄
-- [ ] Add more N5 drills (grammar particles, conjunctions)
+- [ ] Populate `reading` field in particle drill JSON (per-segment furigana)
+- [ ] Add more N5 drills (negative form, conjunctions)
 - [ ] Implement N4, N3, N2, N1 difficulty levels
 - [ ] Add pronunciation hints/audio support
 - [ ] Drill progress persistence (localStorage)
@@ -30,19 +38,22 @@
 - [ ] Integration with Jisho.org API
 - [ ] Export drill results to PDF
 - [ ] Mobile app (React Native)
-- [ ] Dark mode toggle (though design is dark-only)
+- [ ] 404 page
 
 ## Technical Improvements 🛠
 - [ ] Remove deprecated husky hook lines
 - [ ] Add TypeScript interfaces for Question type
 - [ ] Implement proper error boundaries
-- [ ] Add loading states for async operations
 - [ ] Optimize bundle size (tree-shaking)
 - [ ] Add unit tests for DrillSession component
 - [ ] Implement PWA features
 - [ ] Add accessibility improvements (ARIA labels)
 - [ ] Schema.org structured data
 - [ ] Performance metrics tracking
+- [ ] Fix JetBrains Mono font conflict (Inter and JetBrains Mono both mapped to `--font-body`)
+- [ ] Add OG/Twitter card meta tags
+- [ ] Remove orphaned Layout.astro starter template
+- [ ] Audit unused deps (UnoCSS not wired in astro.config)
 
 ## Design System Updates 🎨
 - [ ] Add more color tokens for contrast
