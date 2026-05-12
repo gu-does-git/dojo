@@ -1,6 +1,6 @@
 # Dojo
 
-<img src="https://raw.githubusercontent.com/gu-does-git/dojo/refs/heads/master/public/logo.svg" alt="Dojo Logo" width="32" align="right">
+<img src="https://raw.githubusercontent.com/gu-does-git/dojo/refs/heads/master/public/favicon.svg" alt="Dojo Logo" width="32" align="right">
 
 Japanese grammar learning platform — interactive drills with instant feedback.
 
@@ -8,9 +8,9 @@ Japanese grammar learning platform — interactive drills with instant feedback.
 
 - **Framework**: Astro 6.3 (static-first with React islands)
 - **Interactivity**: React 19 for drill session components
-- **CSS**: Tailwind CSS v4
-- **Fonts**: Inter + Noto Sans JP (Astro native font API)
-- **Icons**: `@iconify/react` + `astro-icon` (Material Design Icons)
+- **CSS**: Tailwind CSS v4 with @theme custom design tokens
+- **Fonts**: Kiwi Maru Google Font (Japanese)
+- **Icons**: `@iconify/react` (Material Design Icons)
 - **Input**: WanaKana (romaji → kana conversion)
 - **Furigana**: react-furi
 - **Confetti**: canvas-confetti
@@ -18,15 +18,18 @@ Japanese grammar learning platform — interactive drills with instant feedback.
 
 ## Features
 
-- Romaji → kana input conversion via WanaKana
+- Romaji → kana input conversion via WanaKana (works in reversed mode too)
 - Furigana display with toggle (supports full sentences for particle drills)
-- Reversed mode — swap prompt/answer to drill both directions
+- Reversed mode — swap prompt/answer to drill both directions (resets drill)
 - Romaji hint toggle
-- Streak tracking with milestone toasts
+- Streak tracking with milestone toasts (🔥3, ⚡5, 🏆10)
 - Results screen: score card, stats, scrollable question history
 - Confetti on perfect score
-- Dark mode (system preference + toggle)
+- **Dark-only warm-tone design** (#1a1816 bg, #5b6abf accent, #b8952f gold)
 - Dynamic drill routing via content collections
+- Client-side filtering on drills page (by type, level, search)
+- Header navigation with back button on drill pages
+- Pill-shaped toggle switches with sliding indicators
 
 ## Drills
 
@@ -44,13 +47,10 @@ src/
 │   ├── past-form.json
 │   └── particles.json
 ├── components/
-│   ├── DrillSession.tsx        — main drill React island
-│   ├── FuriganaText.tsx        — ruby/furigana renderer
-│   ├── LoaderSVG.tsx           — hydration loader
-│   ├── ScoreCard.tsx           — results score display
-│   ├── StatsRow.tsx            — correct/incorrect/streak stats
-│   ├── QuestionHistory.tsx     — scrollable answer review
-│   └── Header.astro            — site header with dark mode toggle
+│   ├── DrillSession.tsx        — main drill React island with toggle switches
+│   ├── FuriganaText.tsx        — ruby/furigana renderer with Kiwi Maru font
+│   ├── LoaderSVG.tsx           — hydration loader with accent color
+│   └── Header.astro            — site header with logo
 ├── layouts/
 │   ├── BaseLayout.astro
 │   └── DrillLayout.astro
