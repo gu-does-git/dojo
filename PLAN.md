@@ -1,95 +1,38 @@
-# Dojo — Implementation Plan
+# Dojo — TODO
 
-## Architecture
+## Done
 
-**Integrations**: Astro 6.3 + React islands + UnoCSS + Content Collections
+- [x] Astro 6 + React islands + Tailwind CSS v4 setup
+- [x] Base layouts (BaseLayout, DrillLayout)
+- [x] Astro native font API (Inter + Noto Sans JP)
+- [x] Dark mode (system preference + toggle in header)
+- [x] Landing page with drill category grid
+- [x] Drills index page matching landing card style
+- [x] Content collections + Zod schemas
+- [x] Drill data: past-form.json, particles.json
+- [x] Dynamic routing via `[slug].astro`
+- [x] DrillSession React component
+  - [x] WanaKana romaji → kana input binding
+  - [x] Reversed mode (swap prompt/answer)
+  - [x] Furigana toggle
+  - [x] Romaji hint toggle
+  - [x] Streak tracking + milestone toasts
+  - [x] Confetti on perfect score
+- [x] Furigana rendering (FuriganaText + react-furi)
+  - [x] Per-segment furigana for particle sentences with `___`
+  - [x] `reading` field in Zod schema + particles.json
+- [x] Results screen: ScoreCard, StatsRow, QuestionHistory
+- [x] Inline hint for fill-in-the-blank questions
+- [x] MDI icons via @iconify/react across all components
+- [x] Loader SVG with hydration handling
+- [x] Husky + commitlint setup
+- [x] Placeholder test for pre-commit hook
 
-**Design**: Modern SaaS, dark mode first. Indigo/purple accents. Inter + Noto Sans JP fonts.
+## Up Next
 
-**Scope**: Grammar drills only (past-form, particles). N5 level.
-
-**Routing**:
-```
-/                    → Landing grid
-/drills              → All drills index
-/drills/past-form    → Past tense conjugation
-/drills/particles    → Particle usage
-```
-
----
-
-## Implementation Checklist
-
-- [ ] Add Astro integrations (React, UnoCSS, sitemap)
-- [ ] Configure UnoCSS theme tokens (colors, typography)
-- [ ] Set up Astro 6 font API (Inter + Noto Sans JP)
-- [ ] Create base layouts (BaseLayout, DrillLayout)
-- [ ] Set up Astro Content Collections + zod schemas
-- [ ] Create drill data (past-form.json, particles.json)
-- [ ] Build React drill components (ConjugationDrill, ParticleDrill)
-- [ ] Create Astro pages (index, drills routes)
-- [ ] Test dev server end-to-end
+- [ ] Add more N5 drills (negative form, te-form)
+- [ ] Add N4 drill content
+- [ ] Keyboard shortcut cheatsheet / help modal
+- [ ] Session history / local storage persistence
+- [ ] 404 page
 - [ ] Deploy to japanese.gudoes.dev
-
----
-
-## File Structure (Target)
-
-```
-src/
-├── content/
-│   ├── config.ts
-│   └── drills/
-│       ├── past-form.json
-│       └── particles.json
-├── components/
-│   ├── DrillCard.astro
-│   ├── DrillShell.astro
-│   └── drills/
-│       ├── ConjugationDrill.tsx
-│       └── ParticleDrill.tsx
-├── layouts/
-│   ├── BaseLayout.astro
-│   └── DrillLayout.astro
-└── pages/
-    ├── index.astro
-    ├── drills/
-    │   ├── index.astro
-    │   ├── past-form.astro
-    │   └── particles.astro
-    └── 404.astro
-```
-
----
-
-## Design System
-
-**Colors** (CSS custom properties):
-- Light: `--bg: #ffffff`, `--text: #0f0f13`
-- Dark: `--bg: #0f0f13`, `--text: #e8e8f0`
-- Accents: `--accent: #818cf8` (indigo), `--accent2: #a78bfa` (purple)
-- Feedback: `--success: #4ade80`, `--error: #f87171`
-
-**Typography**:
-- `text-sm` (14px), `text-base` (16px), `text-xl` (20px), `text-3xl` (30px), `text-5xl` (48px)
-
----
-
-## Drill Data Format
-
-```json
-{
-  "id": "past-form-n5",
-  "title": "Past Form — N5 Verbs",
-  "level": "N5",
-  "type": "conjugation",
-  "questions": [
-    {
-      "prompt": "食べる",
-      "romaji": "taberu",
-      "answer": "食べた",
-      "hint": "Group 2 verb — drop る, add た"
-    }
-  ]
-}
-```
