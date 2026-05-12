@@ -28,3 +28,5 @@ pnpm-debug.log*
 # repo context memory file (not committed)
 repo-context.md
 IMPROVEMENTS.md
+PLAN.md
+TODOS.md
