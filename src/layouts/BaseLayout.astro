@@ -1,5 +1,4 @@
 ---
-import { Font } from 'astro:assets';
 import "../styles/global.css";
 
 interface Props {
@@ -18,18 +17,8 @@ const { title = 'Dojo — Japanese Grammar Drills', description = 'Interactive p
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-
-    {/* Dark mode initialization — runs BEFORE page renders to avoid flash */}
-    <script is:inline>
-      const saved = localStorage.getItem('theme');
-      const isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      if (isDark) document.documentElement.classList.add('dark');
-    </script>
-
-    <Font cssVariable="--font-inter" preload />
-    <Font cssVariable="--font-noto-sans-jp" preload />
   </head>
-  <body class="bg-white dark:bg-slate-950 antialiased">
+  <body>
     <slot />
   </body>
 </html>

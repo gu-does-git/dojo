@@ -4,7 +4,7 @@
   "description": "Master past tense conjugation for N5 verbs. Learn group 1, 2, and irregular conjugations with instant feedback.",
   "level": "N5",
   "type": "conjugation",
-  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/verb-past-tense-ta-form/",
+  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/verb-past-ta-form/",
   "questions": [
     {
       "prompt": "書く",

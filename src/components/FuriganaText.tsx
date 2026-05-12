@@ -18,11 +18,11 @@ export function FuriganaText({
 }: FuriganaTextProps) {
   const pairs = useFuriPairs(word, reading);
   return (
-    <span className='font-light' style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: spacing === 'loose' ? '2' : '1.2' }}>
+    <span className='font-light' style={{ fontFamily: "'Kiwi Maru', sans-serif", lineHeight: spacing === 'loose' ? '2' : '1.2' }}>
       {pairs.map(([furiText, text]: [string, string], idx: number) => (
         <ruby key={idx}>
           {text}
-          {showFuri && <rt className={`text-sm ${rtMargin} text-slate-600 dark:text-slate-400`}>{furiText}</rt>}
+          {showFuri && <rt className={`text-sm ${rtMargin} text-muted`}>{furiText}</rt>}
         </ruby>
       ))}
     </span>

@@ -10,6 +10,7 @@ const drillsCollection = defineCollection({
     description: z.string().optional(),
     level: z.enum(['N5', 'N4', 'N3']),
     type: z.enum(['conjugation', 'particles', 'negative', 'te-form']),
+    cheatsheetUrl: z.string().optional(),
     questions: z.array(
       z.object({
         prompt: z.string(),

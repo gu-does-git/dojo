@@ -17,14 +17,26 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.google(),
-      name: "Inter",
-      cssVariable: "--font-inter",
+      name: "Newsreader",
+      cssVariable: "--font-display",
       weights: ["300", "400", "500", "600", "700", "800", "900"],
     },
     {
       provider: fontProviders.google(),
-      name: "Noto Sans JP",
-      cssVariable: "--font-noto-sans-jp",
+      name: "Inter",
+      cssVariable: "--font-body",
+      weights: ["300", "400", "500", "600", "700", "800", "900"],
+    },
+    {
+      provider: fontProviders.google(),
+      name: "JetBrains Mono",
+      cssVariable: "--font-body",
+      weights: ["300", "400", "500", "600", "700", "800", "900"],
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Kiwi Maru",
+      cssVariable: "--font-jp",
       weights: ["400", "700"],
     },
   ],
