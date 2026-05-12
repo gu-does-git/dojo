@@ -1,7 +1,7 @@
 {
-  "id": "past-form-n5",
-  "title": "Past Form — N5 Verbs",
-  "description": "Master past tense conjugation for N5 verbs. Learn group 1, 2, and irregular conjugations with instant feedback.",
+  "id": "past-form",
+  "title": "た Form — Verbs",
+  "description": "Master past tense conjugation for verbs. Learn group 1, 2, and irregular conjugations with instant feedback.",
   "level": "N5",
   "type": "conjugation",
   "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/verb-past-ta-form/",
@@ -47,19 +47,11 @@
       "hint": "Group 1 verb ending in く → いた"
     },
     {
-      "prompt": "行く",
-      "romaji": "iku",
-      "answer": "行った",
-      "answerRomaji": "itta",
-      "difficulty": "N4",
-      "hint": "Group 1 verb ending in く but irregular: いった"
-    },
-    {
       "prompt": "買う",
       "romaji": "kau",
       "answer": "買った",
       "answerRomaji": "katta",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Group 1 verb ending in う → った"
     },
     {
@@ -67,24 +59,8 @@
       "romaji": "matsu",
       "answer": "待った",
       "answerRomaji": "matta",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Group 1 verb ending in つ → った"
-    },
-    {
-      "prompt": "帰る",
-      "romaji": "kaeru",
-      "answer": "帰った",
-      "answerRomaji": "kaetta",
-      "difficulty": "N4",
-      "hint": "Group 1 verb ending in る → った"
-    },
-    {
-      "prompt": "急ぐ",
-      "romaji": "isogu",
-      "answer": "急いだ",
-      "answerRomaji": "isoida",
-      "difficulty": "N4",
-      "hint": "Group 1 verb ending in ぐ → いだ"
     },
     {
       "prompt": "食べる",
@@ -127,11 +103,19 @@
       "hint": "Group 2 verb ending in る → た"
     },
     {
+      "prompt": "行く",
+      "romaji": "iku",
+      "answer": "行った",
+      "answerRomaji": "itta",
+      "difficulty": "N5",
+      "hint": "Irregular: く → った"
+    },
+    {
       "prompt": "する",
       "romaji": "suru",
       "answer": "した",
       "answerRomaji": "shita",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Irregular verb"
     },
     {
@@ -139,8 +123,48 @@
       "romaji": "kuru",
       "answer": "来た",
       "answerRomaji": "kita",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Irregular verb"
+    },
+    {
+      "prompt": "急ぐ",
+      "romaji": "isogu",
+      "answer": "急いだ",
+      "answerRomaji": "isoida",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ぐ → いだ"
+    },
+    {
+      "prompt": "帰る",
+      "romaji": "kaeru",
+      "answer": "帰った",
+      "answerRomaji": "kaetta",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → った"
+    },
+    {
+      "prompt": "言う",
+      "romaji": "iu",
+      "answer": "言った",
+      "answerRomaji": "itta",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う → った"
+    },
+    {
+      "prompt": "撮る",
+      "romaji": "toru",
+      "answer": "撮った",
+      "answerRomaji": "totta",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → った"
+    },
+    {
+      "prompt": "遊ぶ",
+      "romaji": "asobu",
+      "answer": "遊んだ",
+      "answerRomaji": "asonda",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ぶ → んだ"
     },
     {
       "prompt": "ある",
@@ -151,283 +175,236 @@
       "hint": "Irregular verb"
     },
     {
-      "prompt": "食べる",
-      "reading": "たべる",
-      "romaji": "taberu",
-      "answer": "食べた",
-      "answerRomaji": "tabeta",
-      "difficulty": "N5",
-      "hint": "Plain past of taberu"
-    },
-    {
-      "prompt": "飲む",
-      "reading": "のむ",
-      "romaji": "nomu",
-      "answer": "飲んだ",
-      "answerRomaji": "nonda",
-      "difficulty": "N5",
-      "hint": "Plain past of nomu"
-    },
-    {
-      "prompt": "書く",
-      "reading": "かく",
-      "romaji": "kaku",
-      "answer": "書いた",
-      "answerRomaji": "kaita",
-      "difficulty": "N5",
-      "hint": "Plain past of kaku"
-    },
-    {
-      "prompt": "読む",
-      "reading": "よむ",
-      "romaji": "yomu",
-      "answer": "読んだ",
-      "answerRomaji": "yonda",
-      "difficulty": "N5",
-      "hint": "Plain past of yomu"
-    },
-    {
-      "prompt": "行く",
-      "reading": "いく",
-      "romaji": "iku",
-      "answer": "行った",
-      "answerRomaji": "itta",
-      "difficulty": "N5",
-      "hint": "Plain past of iku"
-    },
-    {
-      "prompt": "する",
-      "reading": "する",
-      "romaji": "suru",
-      "answer": "した",
-      "answerRomaji": "shita",
-      "difficulty": "N5",
-      "hint": "Plain past of suru"
-    },
-    {
-      "prompt": "見る",
-      "reading": "みる",
-      "romaji": "miru",
-      "answer": "見た",
-      "answerRomaji": "mita",
-      "difficulty": "N5",
-      "hint": "Plain past of miru"
-    },
-    {
-      "prompt": "買う",
-      "reading": "かう",
-      "romaji": "kau",
-      "answer": "買った",
-      "answerRomaji": "katta",
-      "difficulty": "N5",
-      "hint": "Plain past of kau"
-    },
-    {
-      "prompt": "撮る",
-      "reading": "とる",
-      "romaji": "toru",
-      "answer": "撮った",
-      "answerRomaji": "totta",
-      "difficulty": "N5",
-      "hint": "Plain past of toru"
-    },
-    {
-      "prompt": "遊ぶ",
-      "reading": "あそぶ",
-      "romaji": "asobu",
-      "answer": "遊んだ",
-      "answerRomaji": "asonde",
-      "difficulty": "N5",
-      "hint": "Plain past of asobu"
-    },
-    {
-      "prompt": "聞く",
-      "reading": "きく",
-      "romaji": "kiku",
-      "answer": "聞いた",
-      "answerRomaji": "kiita",
-      "difficulty": "N5",
-      "hint": "Plain past of kiku"
-    },
-    {
-      "prompt": "言う",
-      "reading": "いう",
-      "romaji": "iu",
-      "answer": "言った",
-      "answerRomaji": "itta",
-      "difficulty": "N5",
-      "hint": "Plain past of iu"
-    },
-    {
-      "prompt": "食べる",
-      "reading": "たべる",
-      "romaji": "taberu",
-      "answer": "食べなかった",
-      "answerRomaji": "tabenakatta",
-      "difficulty": "N5",
-      "hint": "Negative past of taberu"
-    },
-    {
-      "prompt": "行く",
-      "reading": "いく",
-      "romaji": "iku",
-      "answer": "行かなかった",
-      "answerRomaji": "ikanakatta",
-      "difficulty": "N5",
-      "hint": "Negative past of iku"
-    },
-    {
-      "prompt": "する",
-      "reading": "する",
-      "romaji": "suru",
-      "answer": "しなかった",
-      "answerRomaji": "shinakatta",
-      "difficulty": "N5",
-      "hint": "Negative past of suru"
-    },
-    {
       "prompt": "分かる",
-      "reading": "わかる",
       "romaji": "wakaru",
       "answer": "分かった",
       "answerRomaji": "wakatta",
       "difficulty": "N4",
-      "hint": "Plain past of wakaru"
+      "hint": "Group 1 verb ending in る → った"
     },
     {
       "prompt": "始める",
-      "reading": "はじめめる",
       "romaji": "hajimeru",
       "answer": "始めた",
       "answerRomaji": "hajimeta",
       "difficulty": "N4",
-      "hint": "Plain past of hajimeru"
+      "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "迷う",
-      "reading": "まよう",
       "romaji": "mayou",
       "answer": "迷った",
       "answerRomaji": "mayotta",
       "difficulty": "N4",
-      "hint": "Plain past of mayou"
+      "hint": "Group 1 verb ending in う → った"
     },
     {
       "prompt": "止める",
-      "reading": "とめる",
       "romaji": "tomeru",
       "answer": "止めた",
       "answerRomaji": "tometa",
       "difficulty": "N4",
-      "hint": "Plain past of tomeru"
+      "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "変える",
-      "reading": "かえる",
       "romaji": "kaeru",
       "answer": "変えた",
       "answerRomaji": "kaeta",
       "difficulty": "N4",
-      "hint": "Plain past of kaeru"
+      "hint": "Group 2 verb ending in える → えた"
     },
     {
       "prompt": "着る",
-      "reading": "きれい",
       "romaji": "kiru",
       "answer": "着た",
       "answerRomaji": "kita",
       "difficulty": "N4",
-      "hint": "Plain past of kiru"
+      "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "得る",
-      "reading": "える",
       "romaji": "eru",
       "answer": "得た",
       "answerRomaji": "eta",
       "difficulty": "N4",
-      "hint": "Plain past of eru"
+      "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "出る",
-      "reading": "でる",
       "romaji": "deru",
       "answer": "出た",
       "answerRomaji": "deta",
       "difficulty": "N4",
-      "hint": "Plain past of deru"
+      "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "忘れる",
-      "reading": "わすれる",
       "romaji": "wasureru",
       "answer": "忘れた",
       "answerRomaji": "wasureta",
       "difficulty": "N4",
-      "hint": "Plain past of wasureru"
-    },
-    {
-      "prompt": "借ります",
-      "reading": "かかります",
-      "romaji": "karimasu",
-      "answer": "借りました",
-      "answerRomaji": "karimashita",
-      "difficulty": "N4",
-      "hint": "Masu past"
-    },
-    {
-      "prompt": "送ります",
-      "reading": "おくります",
-      "romaji": "okurimasu",
-      "answer": "送りました",
-      "answerRomaji": "okurimashita",
-      "difficulty": "N4",
-      "hint": "Masu past"
-    },
-    {
-      "prompt": "泊まります",
-      "reading": "とまります",
-      "romaji": "tomarimasu",
-      "answer": "泊まりました",
-      "answerRomaji": "tomarimashita",
-      "difficulty": "N4",
-      "hint": "Masu past"
-    },
-    {
-      "prompt": "話しかける",
-      "reading": "はなしかける",
-      "romaji": "hanashikakeru",
-      "answer": "話しかけた",
-      "answerRomaji": "hanashikaketa",
-      "difficulty": "N3",
-      "hint": "Plain past of hanashikakeru"
+      "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "飛び込む",
-      "reading": "とびこむ",
       "romaji": "tobikomu",
       "answer": "飛び込んだ",
       "answerRomaji": "tobikonda",
       "difficulty": "N3",
-      "hint": "Plain past of tobikomu"
+      "hint": "Group 1 verb ending in む → んだ"
     },
     {
       "prompt": "出掛ける",
-      "reading": "でかける",
       "romaji": "dekakeru",
       "answer": "出掛けた",
       "answerRomaji": "dekaketa",
       "difficulty": "N3",
-      "hint": "Plain past of dekakeru"
+      "hint": "Group 2 verb ending in る → た"
     },
     {
       "prompt": "乗り越える",
-      "reading": "のりこえる",
       "romaji": "norikoeru",
       "answer": "乗り越えた",
       "answerRomaji": "norikoeta",
       "difficulty": "N3",
-      "hint": "Plain past of norikoeru"
+      "hint": "Group 2 verb ending in える → えた"
+    },
+    {
+      "prompt": "働く",
+      "romaji": "hataraku",
+      "answer": "働いた",
+      "answerRomaji": "hataraita",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in く → いた"
+    },
+    {
+      "prompt": "考える",
+      "romaji": "kangaeru",
+      "answer": "考えた",
+      "answerRomaji": "kangaeta",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in える → えた"
+    },
+    {
+      "prompt": "感じる",
+      "romaji": "kanjiru",
+      "answer": "感じた",
+      "answerRomaji": "kanjita",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in る → た"
+    },
+    {
+      "prompt": "決める",
+      "romaji": "kimeru",
+      "answer": "決めた",
+      "answerRomaji": "kimeta",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in める → めた"
+    },
+    {
+      "prompt": "使う",
+      "romaji": "tsukau",
+      "answer": "使った",
+      "answerRomaji": "tsukatta",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う → った"
+    },
+    {
+      "prompt": "開ける",
+      "romaji": "akeru",
+      "answer": "開けた",
+      "answerRomaji": "aketa",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in ける → けた"
+    },
+    {
+      "prompt": "続ける",
+      "romaji": "tsuzukeru",
+      "answer": "続けた",
+      "answerRomaji": "tsuzuketa",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in ける → けた"
+    },
+    {
+      "prompt": "選ぶ",
+      "romaji": "erabu",
+      "answer": "選んだ",
+      "answerRomaji": "eranda",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ぶ → んだ"
+    },
+    {
+      "prompt": "配る",
+      "romaji": "kubaru",
+      "answer": "配った",
+      "answerRomaji": "kubatta",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → った"
+    },
+    {
+      "prompt": "触る",
+      "romaji": "sawaru",
+      "answer": "触った",
+      "answerRomaji": "sawatta",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → った"
+    },
+    {
+      "prompt": "降る",
+      "romaji": "furu",
+      "answer": "降った",
+      "answerRomaji": "futta",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → った"
+    },
+    {
+      "prompt": "進む",
+      "romaji": "susumu",
+      "answer": "進んだ",
+      "answerRomaji": "susunda",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in む → んだ"
+    },
+    {
+      "prompt": "探す",
+      "romaji": "sagasu",
+      "answer": "探した",
+      "answerRomaji": "sagashita",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in す → した"
+    },
+    {
+      "prompt": "残す",
+      "romaji": "nokosu",
+      "answer": "残した",
+      "answerRomaji": "nokoshita",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in す → した"
+    },
+    {
+      "prompt": "調べる",
+      "romaji": "shiraberu",
+      "answer": "調べた",
+      "answerRomaji": "shirabeta",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in る → た"
+    },
+    {
+      "prompt": "受ける",
+      "romaji": "ukeru",
+      "answer": "受けた",
+      "answerRomaji": "uketa",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in ける → けた"
+    },
+    {
+      "prompt": "注ぐ",
+      "romaji": "sosogu",
+      "answer": "注いだ",
+      "answerRomaji": "sosoida",
+      "difficulty": "N4",
+      "hint": "Group 1 verb ending in ぐ → いだ"
     }
   ]
 }

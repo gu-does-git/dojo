@@ -1,0 +1,410 @@
+{
+  "id": "te-form",
+  "title": "て Form — Verbs",
+  "description": "Master て form conjugation for verbs. Learn group 1, 2, and irregular conjugations with instant feedback.",
+  "level": "N5",
+  "type": "conjugation",
+  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/te-form/",
+  "questions": [
+    {
+      "prompt": "書く",
+      "romaji": "kaku",
+      "answer": "書いて",
+      "answerRomaji": "kaite",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in く → いて"
+    },
+    {
+      "prompt": "飲む",
+      "romaji": "nomu",
+      "answer": "飲んで",
+      "answerRomaji": "nonde",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in む → んで"
+    },
+    {
+      "prompt": "話す",
+      "romaji": "hanasu",
+      "answer": "話して",
+      "answerRomaji": "hanashite",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in す → して"
+    },
+    {
+      "prompt": "読む",
+      "romaji": "yomu",
+      "answer": "読んで",
+      "answerRomaji": "yonde",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in む → んで"
+    },
+    {
+      "prompt": "聞く",
+      "romaji": "kiku",
+      "answer": "聞いて",
+      "answerRomaji": "kiite",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in く → いて"
+    },
+    {
+      "prompt": "買う",
+      "romaji": "kau",
+      "answer": "買って",
+      "answerRomaji": "katte",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う → って"
+    },
+    {
+      "prompt": "待つ",
+      "romaji": "matsu",
+      "answer": "待って",
+      "answerRomaji": "matte",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in つ → って"
+    },
+    {
+      "prompt": "食べる",
+      "romaji": "taberu",
+      "answer": "食べて",
+      "answerRomaji": "tabete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "見る",
+      "romaji": "miru",
+      "answer": "見て",
+      "answerRomaji": "mite",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "起きる",
+      "romaji": "okiru",
+      "answer": "起きて",
+      "answerRomaji": "okite",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "教える",
+      "romaji": "oshieru",
+      "answer": "教えて",
+      "answerRomaji": "oshiete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in える → えて"
+    },
+    {
+      "prompt": "寝る",
+      "romaji": "neru",
+      "answer": "寝て",
+      "answerRomaji": "nete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "行く",
+      "romaji": "iku",
+      "answer": "行って",
+      "answerRomaji": "itte",
+      "difficulty": "N5",
+      "hint": "Irregular: く → って"
+    },
+    {
+      "prompt": "する",
+      "romaji": "suru",
+      "answer": "して",
+      "answerRomaji": "shite",
+      "difficulty": "N5",
+      "hint": "Irregular verb"
+    },
+    {
+      "prompt": "来る",
+      "romaji": "kuru",
+      "answer": "来て",
+      "answerRomaji": "kite",
+      "difficulty": "N5",
+      "hint": "Irregular verb"
+    },
+    {
+      "prompt": "急ぐ",
+      "romaji": "isogu",
+      "answer": "急いで",
+      "answerRomaji": "isoide",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ぐ → いで"
+    },
+    {
+      "prompt": "帰る",
+      "romaji": "kaeru",
+      "answer": "帰って",
+      "answerRomaji": "kaette",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → って"
+    },
+    {
+      "prompt": "言う",
+      "romaji": "iu",
+      "answer": "言って",
+      "answerRomaji": "itte",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う → って"
+    },
+    {
+      "prompt": "撮る",
+      "romaji": "toru",
+      "answer": "撮って",
+      "answerRomaji": "totte",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → って"
+    },
+    {
+      "prompt": "遊ぶ",
+      "romaji": "asobu",
+      "answer": "遊んで",
+      "answerRomaji": "asonde",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ぶ → んで"
+    },
+    {
+      "prompt": "ある",
+      "romaji": "aru",
+      "answer": "あって",
+      "answerRomaji": "atte",
+      "difficulty": "N4",
+      "hint": "Irregular verb"
+    },
+    {
+      "prompt": "分かる",
+      "romaji": "wakaru",
+      "answer": "分かって",
+      "answerRomaji": "wakatte",
+      "difficulty": "N4",
+      "hint": "Group 1 verb ending in る → って"
+    },
+    {
+      "prompt": "始める",
+      "romaji": "hajimeru",
+      "answer": "始めて",
+      "answerRomaji": "hajimete",
+      "difficulty": "N4",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "迷う",
+      "romaji": "mayou",
+      "answer": "迷って",
+      "answerRomaji": "mayotte",
+      "difficulty": "N4",
+      "hint": "Group 1 verb ending in う → って"
+    },
+    {
+      "prompt": "止める",
+      "romaji": "tomeru",
+      "answer": "止めて",
+      "answerRomaji": "tomete",
+      "difficulty": "N4",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "変える",
+      "romaji": "kaeru",
+      "answer": "変えて",
+      "answerRomaji": "kaete",
+      "difficulty": "N4",
+      "hint": "Group 2 verb ending in える → えて"
+    },
+    {
+      "prompt": "着る",
+      "romaji": "kiru",
+      "answer": "着て",
+      "answerRomaji": "kite",
+      "difficulty": "N4",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "得る",
+      "romaji": "eru",
+      "answer": "得て",
+      "answerRomaji": "ete",
+      "difficulty": "N4",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "出る",
+      "romaji": "deru",
+      "answer": "出て",
+      "answerRomaji": "dete",
+      "difficulty": "N4",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "忘れる",
+      "romaji": "wasureru",
+      "answer": "忘れて",
+      "answerRomaji": "wasurete",
+      "difficulty": "N4",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "働く",
+      "romaji": "hataraku",
+      "answer": "働いて",
+      "answerRomaji": "hataraite",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in く → いて"
+    },
+    {
+      "prompt": "考える",
+      "romaji": "kangaeru",
+      "answer": "考えて",
+      "answerRomaji": "kangaete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in える → えて"
+    },
+    {
+      "prompt": "感じる",
+      "romaji": "kanjiru",
+      "answer": "感じて",
+      "answerRomaji": "kanjite",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "決める",
+      "romaji": "kimeru",
+      "answer": "決めて",
+      "answerRomaji": "kimete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in める → めて"
+    },
+    {
+      "prompt": "使う",
+      "romaji": "tsukau",
+      "answer": "使って",
+      "answerRomaji": "tsukatte",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う → って"
+    },
+    {
+      "prompt": "開ける",
+      "romaji": "akeru",
+      "answer": "開けて",
+      "answerRomaji": "akete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in ける → けて"
+    },
+    {
+      "prompt": "続ける",
+      "romaji": "tsuzukeru",
+      "answer": "続けて",
+      "answerRomaji": "tsuzukete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in ける → けて"
+    },
+    {
+      "prompt": "選ぶ",
+      "romaji": "erabu",
+      "answer": "選んで",
+      "answerRomaji": "erande",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ぶ → んで"
+    },
+    {
+      "prompt": "配る",
+      "romaji": "kubaru",
+      "answer": "配って",
+      "answerRomaji": "kubatte",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → って"
+    },
+    {
+      "prompt": "触る",
+      "romaji": "sawaru",
+      "answer": "触って",
+      "answerRomaji": "sawatte",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → って"
+    },
+    {
+      "prompt": "降る",
+      "romaji": "furu",
+      "answer": "降って",
+      "answerRomaji": "futte",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る → って"
+    },
+    {
+      "prompt": "進む",
+      "romaji": "susumu",
+      "answer": "進んで",
+      "answerRomaji": "susunde",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in む → んで"
+    },
+    {
+      "prompt": "探す",
+      "romaji": "sagasu",
+      "answer": "探して",
+      "answerRomaji": "sagashite",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in す → して"
+    },
+    {
+      "prompt": "残す",
+      "romaji": "nokosu",
+      "answer": "残して",
+      "answerRomaji": "nokoshite",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in す → して"
+    },
+    {
+      "prompt": "調べる",
+      "romaji": "shiraberu",
+      "answer": "調べて",
+      "answerRomaji": "shirabete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in る → て"
+    },
+    {
+      "prompt": "受ける",
+      "romaji": "ukeru",
+      "answer": "受けて",
+      "answerRomaji": "ukete",
+      "difficulty": "N5",
+      "hint": "Group 2 verb ending in ける → けて"
+    },
+    {
+      "prompt": "注ぐ",
+      "romaji": "sosogu",
+      "answer": "注いで",
+      "answerRomaji": "sosoide",
+      "difficulty": "N4",
+      "hint": "Group 1 verb ending in ぐ → いで"
+    },
+    {
+      "prompt": "登る",
+      "romaji": "noboru",
+      "answer": "登って",
+      "answerRomaji": "nobotte",
+      "difficulty": "N4",
+      "hint": "Group 1 verb ending in る → って"
+    },
+    {
+      "prompt": "結ぶ",
+      "romaji": "musubu",
+      "answer": "結んで",
+      "answerRomaji": "musunde",
+      "difficulty": "N4",
+      "hint": "Group 1 verb ending in ぶ → んで"
+    },
+    {
+      "prompt": "助ける",
+      "romaji": "tasukeru",
+      "answer": "助けて",
+      "answerRomaji": "tasukete",
+      "difficulty": "N4",
+      "hint": "Group 2 verb ending in ける → けて"
+    }
+  ]
+}

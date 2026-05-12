@@ -1,23 +1,21 @@
 {
   "id": "particles-n5",
   "title": "Particles — N5 Grammar",
-  "description": "Learn は, が, を, に particle usage in context. Understand when and how to use each particle correctly.",
+  "description": "Learn は, が, を, に, で, と particle usage in context. Understand when and how to use each particle correctly.",
   "level": "N5",
   "type": "particles",
   "cheatsheetUrl": "https://www.tofugu.com/japanese/japanese-particles-cheatsheet/",
   "questions": [
     {
       "prompt": "私___学生です。",
-      "reading": "わたし___がくせいです。",
       "romaji": "Watashi ___ gakusei desu.",
       "answer": "は",
-      "answerRomaji": "ha",
+      "answerRomaji": "wa",
       "difficulty": "N5",
       "hint": "Topic marker — identifying the subject"
     },
     {
       "prompt": "猫___ここにいます。",
-      "reading": "ねこ___ここにいます。",
       "romaji": "Neko ___ koko ni imasu.",
       "answer": "が",
       "answerRomaji": "ga",
@@ -26,7 +24,6 @@
     },
     {
       "prompt": "水___飲みます。",
-      "reading": "みず___のみます。",
       "romaji": "Mizu ___ nomimasu.",
       "answer": "を",
       "answerRomaji": "wo",
@@ -35,7 +32,6 @@
     },
     {
       "prompt": "学校___行きます。",
-      "reading": "がっこう___いきます。",
       "romaji": "Gakkou ___ ikimasu.",
       "answer": "に",
       "answerRomaji": "ni",
@@ -44,16 +40,14 @@
     },
     {
       "prompt": "天気___いいですね。",
-      "reading": "てんき___いいですね。",
       "romaji": "Tenki ___ ii desu ne.",
       "answer": "は",
-      "answerRomaji": "ha",
+      "answerRomaji": "wa",
       "difficulty": "N5",
       "hint": "Topic marker — commenting on the weather"
     },
     {
       "prompt": "誰___来ましたか？",
-      "reading": "だれ___きましたか？",
       "romaji": "Dare ___ kimashita ka?",
       "answer": "が",
       "answerRomaji": "ga",
@@ -62,7 +56,6 @@
     },
     {
       "prompt": "毎日、日本語___勉強します。",
-      "reading": "まいにち、にほんご___べんきょうします。",
       "romaji": "Mainichi, nihongo ___ benkyou shimasu.",
       "answer": "を",
       "answerRomaji": "wo",
@@ -71,34 +64,22 @@
     },
     {
       "prompt": "公園___友達___会いました。",
-      "reading": "こうえん___ともだち___あいました。",
       "romaji": "Kouen ___ tomodachi ___ aimashita.",
       "answer": "で",
       "answerRomaji": "de",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Location marker — where the action took place"
     },
     {
-      "prompt": "妹___兄___好きです。",
-      "reading": "いもうと___あに___すきです。",
-      "romaji": "Imouto ___ ani ___ suki desu.",
-      "answer": "は",
-      "answerRomaji": "ha",
-      "difficulty": "N4",
-      "hint": "Topic marker — about the younger sister's preference"
-    },
-    {
       "prompt": "コーヒー___好きですか？",
-      "reading": "コーヒー___すきですか？",
       "romaji": "Koohii ___ suki desu ka?",
       "answer": "は",
-      "answerRomaji": "ha",
+      "answerRomaji": "wa",
       "difficulty": "N5",
       "hint": "Topic marker — question about coffee"
     },
     {
       "prompt": "昨日、テレビ___見ました。",
-      "reading": "きのう、テレビ___みました。",
       "romaji": "Kinou, terebi ___ mimashita.",
       "answer": "を",
       "answerRomaji": "wo",
@@ -107,34 +88,30 @@
     },
     {
       "prompt": "病院___働いています。",
-      "reading": "びょういん___はたらいています。",
       "romaji": "Byouin ___ hataraite imasu.",
       "answer": "で",
       "answerRomaji": "de",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Location marker — where someone works"
     },
     {
       "prompt": "誰___一番背が高いですか？",
-      "reading": "だれ___いちばんせがたかいですか？",
       "romaji": "Dare ___ ichiban se ga takai desu ka?",
       "answer": "が",
       "answerRomaji": "ga",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Subject marker — asking 'who is the tallest'"
     },
     {
       "prompt": "明日、映画___見に行きます。",
-      "reading": "あした、えいが___みにいきます。",
       "romaji": "Ashita, eiga ___ mi ni ikimasu.",
       "answer": "を",
       "answerRomaji": "wo",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Object marker — what movie to watch"
     },
     {
       "prompt": "東京___住んでいます。",
-      "reading": "とうきょう___すんでいます。",
       "romaji": "Toukyou ___ sunde imasu.",
       "answer": "に",
       "answerRomaji": "ni",
@@ -142,319 +119,292 @@
       "hint": "Location marker — where someone lives/resides"
     },
     {
-      "prompt": "猫___魚をを食べます。",
-      "reading": "ねこ___さかなををたべます。",
+      "prompt": "猫___魚を食べます。",
       "romaji": "Neko ___ sakana wo tabemasu.",
       "answer": "は",
-      "answerRomaji": "ha",
+      "answerRomaji": "wa",
       "difficulty": "N5",
       "hint": "Topic marker for the cat"
     },
     {
-      "prompt": "私___ japonésを勉強します。",
-      "reading": "わたし___にほんごをべんきょうします。",
+      "prompt": "私___日本語を勉強します。",
       "romaji": "Watashi ___ nihongo wo benkyou shimasu.",
       "answer": "は",
-      "answerRomaji": "ha",
+      "answerRomaji": "wa",
       "difficulty": "N5",
       "hint": "Topic marker"
     },
     {
-      "prompt": "先生___学生___教えます。",
-      "reading": "せんせい___がくせい___おしえます。",
-      "romaji": "Sensei ___ gakusei ___ oshiemasu.",
-      "answer": "が",
-      "answerRomaji": "ga",
-      "difficulty": "N5",
-      "hint": "Subject marker"
-    },
-    {
-      "prompt": "彼___昨日___来ました。",
-      "reading": "かれ___きのう___きました。",
-      "romaji": "Kare ___ kinou ___ kimashita.",
+      "prompt": "彼___昨日来ました。",
+      "romaji": "Kare ___ kinou kimashita.",
       "answer": "は",
-      "answerRomaji": "ha",
+      "answerRomaji": "wa",
       "difficulty": "N5",
       "hint": "Topic marker (not が)"
     },
     {
-      "prompt": "これ___何___ですか。",
-      "reading": "これ___なん___ですか。",
-      "romaji": "Kore ___ nani ___ desu ka.",
-      "answer": "が",
-      "answerRomaji": "ga",
+      "prompt": "これ___何ですか。",
+      "romaji": "Kore ___ nani desu ka.",
+      "answer": "は",
+      "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "What is this? が asks"
+      "hint": "What is this? は asks"
     },
     {
-      "prompt": "誰___それが___好きですか。",
-      "reading": "だれ___それが___すきですか。",
-      "romaji": "Dare ___ sore ga ___ suki desu ka.",
-      "answer": "が",
-      "answerRomaji": "ga",
-      "difficulty": "N5",
-      "hint": "Likes what? が marks object"
-    },
-    {
-      "prompt": "本___読み___ます。",
-      "reading": "ほん___よみ___ます。",
-      "romaji": "Hon ___ yomi ___ masu.",
+      "prompt": "本___読みます。",
+      "romaji": "Hon ___ yomimasu.",
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
       "hint": "Direct object marker"
     },
     {
-      "prompt": "コーヒー___飲み___ますか。",
-      "reading": "コーヒー___のみ___ますか。",
-      "romaji": "Koohii ___ nomi ___ masu ka.",
+      "prompt": "コーヒー___飲みますか。",
+      "romaji": "Koohii ___ nomimasu ka.",
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
       "hint": "Drinking what? を marks object"
     },
     {
-      "prompt": "映画___見___ました。",
-      "reading": "えいが___み___ました。",
-      "romaji": "Eiga ___ mi ___ mashita.",
+      "prompt": "映画___見ました。",
+      "romaji": "Eiga ___ mimashita.",
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
       "hint": "Saw what? を marks object"
     },
     {
-      "prompt": "学校___行___きます。",
-      "reading": "がっこう___い___きます。",
-      "romaji": "Gakkou ___ i___ kimasu.",
+      "prompt": "学校___行きます。",
+      "romaji": "Gakkou ___ ikimasu.",
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
       "hint": "Destination marker"
     },
     {
-      "prompt": "駅___降___ります。",
-      "reading": "えき___おり___ります。",
-      "romaji": "Eki ___ ori ___ rimasu.",
+      "prompt": "駅___降ります。",
+      "romaji": "Eki ___ orimasu.",
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
       "hint": "Getting off at where?"
     },
     {
-      "prompt": "明日___学校___行___きます。",
-      "reading": "あした___がっこう___い___きます。",
-      "romaji": "Ashita ___ gakkou ___ i___ kimasu.",
-      "answer": "に",
-      "answerRomaji": "ni",
-      "difficulty": "N5",
-      "hint": "Going to where?"
-    },
-    {
-      "prompt": "図書館___本___を読み___ます。",
-      "reading": "としょкан___ほん___をよみ___ます。",
-      "romaji": "Toshokan ___ hon ___ wo yomi ___ masu.",
+      "prompt": "図書館___本を読みます。",
+      "romaji": "Toshokan ___ hon wo yomimasu.",
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
       "hint": "Location of action (reading)"
     },
     {
-      "prompt": "駅___電車___待ち___ます。",
-      "reading": "えき___でんしゃ___ま___ちます。",
-      "romaji": "Eki ___ densha ___ ma___chimasu.",
+      "prompt": "駅___電車を待ちます。",
+      "romaji": "Eki ___ densha wo machimasu.",
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
       "hint": "Waiting where?"
     },
     {
-      "prompt": "レストラン___ランチ___を食べ___ます。",
-      "reading": "レストラン___ランチ___をたべ___ます。",
-      "romaji": "Resutoran ___ ranchi ___ wo tabe___masu.",
+      "prompt": "レストラン___ランチを食べます。",
+      "romaji": "Resutoran ___ ranchi wo tabemasu.",
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
       "hint": "Eating where?"
     },
     {
-      "prompt": "友達___映画___見___ます。",
-      "reading": "ともだち___えいが___み___ます。",
-      "romaji": "Tomodachi ___ eiga ___ mi___masu.",
+      "prompt": "友達___映画を見ます。",
+      "romaji": "Tomodachi ___ eiga wo mimasu.",
       "answer": "と",
       "answerRomaji": "to",
       "difficulty": "N5",
       "hint": "With whom?"
     },
     {
-      "prompt": "先生___話___します。",
-      "reading": "せんせい___はな___します。",
-      "romaji": "Sensei ___ hana___shimasu.",
+      "prompt": "先生___話します。",
+      "romaji": "Sensei ___ hanashimasu.",
       "answer": "と",
       "answerRomaji": "to",
       "difficulty": "N5",
       "hint": "Talking with whom?"
     },
     {
-      "prompt": "的本___猫___います。",
-      "reading": "ほんとう___ねこ___います。",
-      "romaji": "Hontou ___ neko ___ imasu.",
+      "prompt": "部屋___猫がいます。",
+      "romaji": "Heya ___ neko ga imasu.",
       "answer": "に",
       "answerRomaji": "ni",
-      "difficulty": "N4",
-      "hint": "Location of existence"
+      "difficulty": "N5",
+      "hint": "Cat is in what room?"
     },
     {
-      "prompt": "部屋___彼___います。",
-      "reading": "へや___かれ___います。",
-      "romaji": "Heya ___ kare ___ imasu.",
+      "prompt": "机___本があります。",
+      "romaji": "Tsukue ___ hon ga arimasu.",
       "answer": "に",
       "answerRomaji": "ni",
-      "difficulty": "N4",
-      "hint": "He is in what room?"
-    },
-    {
-      "prompt": "机___本___あり___ます。",
-      "reading": "つくえ___ほん___あり___ます。",
-      "romaji": "Tsukue ___ hon ___ ari___masu.",
-      "answer": "に",
-      "answerRomaji": "ni",
-      "difficulty": "N4",
+      "difficulty": "N5",
       "hint": "Book is on the desk"
     },
     {
-      "prompt": "日曜日___泳___ぎ___ます。",
-      "reading": "にちよう___およ___ぎ___ます。",
-      "romaji": "Nichiyou ___ oyo___gi___masu.",
-      "answer": "に",
-      "answerRomaji": "ni",
-      "difficulty": "N4",
-      "hint": "Swimming when?"
+      "prompt": "お母さん___料理を作ります。",
+      "romaji": "Okaasan ___ ryouri wo tsukurimasu.",
+      "answer": "が",
+      "answerRomaji": "ga",
+      "difficulty": "N5",
+      "hint": "Mother cooks — who does it?"
     },
     {
-      "prompt": "朝___散歩___し___ます。",
-      "reading": "あさ___さんぽ___し___ます。",
-      "romaji": "Asa ___ sanpo ___ shi___masu.",
-      "answer": "に",
-      "answerRomaji": "ni",
-      "difficulty": "N4",
-      "hint": "Walking when?"
-    },
-    {
-      "prompt": "金曜___仕事___し___ます。",
-      "reading": "きんよう___しごと___し___ます。",
-      "romaji": "Kinyou ___ shigoto ___ shi___masu.",
-      "answer": "に",
-      "answerRomaji": "ni",
-      "difficulty": "N4",
-      "hint": "Working when?"
-    },
-    {
-      "prompt": "私___代わり___にやり___ます。",
-      "reading": "かわ___りに___やり___ます。",
-      "romaji": "Watashi ___ kaWari ___ ni yari___masu.",
-      "answer": "に",
-      "answerRomaji": "ni",
-      "difficulty": "N4",
-      "hint": "Instead of whom?"
-    },
-    {
-      "prompt": "漫画___ばか___に___読み___ます。",
-      "reading": "まんが___ばか___に___よみ___ます。",
-      "romaji": "Manga ___ baka ___ ni ___ yomi___masu.",
-      "answer": "で",
-      "answerRomaji": "de",
-      "difficulty": "N4",
-      "hint": "Reading as a fool (reduced way)"
-    },
-    {
-      "prompt": " 회사___한국___에서___일___합니다.",
-      "reading": "회___사___한국___에서___일___합니다。",
-      "romaji": "Hoesah ___ hanguk ___ eso ___ il ___ habnida.",
-      "answer": "で",
-      "answerRomaji": "de",
-      "difficulty": "N4",
-      "hint": "Working where?"
-    },
-    {
-      "prompt": " 학교___한국___에서___공부___합니다.",
-      "reading": "학___교___한국___에서___공부___합니다。",
-      "romaji": "Haggyo ___ hanguk ___ eso ___ gongbu ___ habnida.",
-      "answer": "で",
-      "answerRomaji": "de",
-      "difficulty": "N4",
-      "hint": "Studying where?"
-    },
-    {
-      "prompt": "雨___降___れば外出___しません。",
-      "reading": "あめ___ふ___ればがいしゅつ___しません。",
-      "romaji": "Ame ___ fu___reba gaishutsu ___ shimasen.",
-      "answer": "たら",
-      "answerRomaji": "tara",
-      "difficulty": "N3",
-      "hint": "Conditional: if it rains"
-    },
-    {
-      "prompt": "먹___으면___병원___가___어야___한다.",
-      "reading": "먹___으면___병원___가___어야___한다。",
-      "romaji": "Meok___ eum___yeon ___ byungwon ___ ga ___ eoya ___ handa.",
-      "answer": "で",
-      "answerRomaji": "de",
-      "difficulty": "N3",
-      "hint": "At the hospital"
-    },
-    {
-      "prompt": "旅行___行___けば___楽しめる___です。",
-      "reading": "りょこう___い___けば___たのしめる___です。",
-      "romaji": "Ryokou ___ i___keba ___ tanoshimeru ___ desu.",
-      "answer": "ば",
-      "answerRomaji": "ba",
-      "difficulty": "N3",
-      "hint": "If you go on a trip"
-    },
-    {
-      "prompt": "勉強___し___さえ___すれば___合格___できます。",
-      "reading": "べんきょう___し___さえ___すれば___ごうかく___できます。",
-      "romaji": "Benkyou ___ shi___sae___sureba ___ goukaku ___ dekimasu.",
-      "answer": "で",
-      "answerRomaji": "de",
-      "difficulty": "N3",
-      "hint": "As long as you study"
-    },
-    {
-      "prompt": "時間___な___ければ___、無理___です。",
-      "reading": "じかん___な___ければ___むり___です。",
-      "romaji": "Jikan ___ na___kereba ___ muri ___ desu.",
-      "answer": "に",
-      "answerRomaji": "ni",
-      "difficulty": "N3",
-      "hint": "If there is no time"
-    },
-    {
-      "prompt": " bicara___면____can speak if you practice",
-      "reading": " bicara___하면____can speak if you practice",
-      "romaji": "Bichara ___ hamyeon ___ can speak if you practice",
-      "answer": "면",
-      "answerRomaji": "myeon",
-      "difficulty": "N3",
-      "hint": "If you practice"
-    },
-    {
-      "prompt": " هذا___كتاب___هذا___بالكتاب___.",
-      "reading": " هذا___كتاب___هذا___بالكِتاب___。",
-      "romaji": "Hatha ___ kitabu ___ hatha ___ bilkitab.",
-      "answer": "で",
-      "answerRomaji": "de",
-      "difficulty": "N3",
-      "hint": "This book (with/using)"
-    },
-    {
-      "prompt": "学校___で___も___ студент___студент___.",
-      "reading": "がっこう___でも___がくせい___がくせい___。",
-      "romaji": "Gakkou ___ de ___ mo ___ gakusei ___ gakusei.",
+      "prompt": "兄弟___三人です。",
+      "romaji": "Kyoudai ___ san nin desu.",
       "answer": "は",
       "answerRomaji": "wa",
-      "difficulty": "N3",
-      "hint": "Even at school (topic)"
+      "difficulty": "N5",
+      "hint": "Topic marker — siblings"
+    },
+    {
+      "prompt": "姉___学生で、妹___会社員です。",
+      "romaji": "Ane ___ gakusei de, imouto ___ kaishain desu.",
+      "answer": "は",
+      "answerRomaji": "wa",
+      "difficulty": "N5",
+      "hint": "Topic marker — contrasting older and younger sister"
+    },
+    {
+      "prompt": "毎朝___ジョギングをします。",
+      "romaji": "Maiasa ___ jogging wo shimasu.",
+      "answer": "を",
+      "answerRomaji": "wo",
+      "difficulty": "N5",
+      "hint": "What do you do in the morning?"
+    },
+    {
+      "prompt": "友達___手紙を書きました。",
+      "romaji": "Tomodachi ___ tegami wo kakimashita.",
+      "answer": "に",
+      "answerRomaji": "ni",
+      "difficulty": "N5",
+      "hint": "Wrote a letter to whom?"
+    },
+    {
+      "prompt": "兄___弟___教えます。",
+      "romaji": "Ani ___ ototo ___ oshiemasu.",
+      "answer": "が",
+      "answerRomaji": "ga",
+      "difficulty": "N5",
+      "hint": "Brother teaches little brother — who teaches?"
+    },
+    {
+      "prompt": "パン___買いました。",
+      "romaji": "Pan ___ kaimashita.",
+      "answer": "を",
+      "answerRomaji": "wo",
+      "difficulty": "N5",
+      "hint": "Bought what?"
+    },
+    {
+      "prompt": "カフェ___休みます。",
+      "romaji": "Kafe ___ yasumimasu.",
+      "answer": "で",
+      "answerRomaji": "de",
+      "difficulty": "N5",
+      "hint": "Resting where?"
+    },
+    {
+      "prompt": "誰___来ましたか？",
+      "romaji": "Dare ___ kimashita ka?",
+      "answer": "が",
+      "answerRomaji": "ga",
+      "difficulty": "N5",
+      "hint": "Who came?"
+    },
+    {
+      "prompt": "私___彼___好きです。",
+      "romaji": "Watashi ___ kare ___ suki desu.",
+      "answer": "は",
+      "answerRomaji": "wa",
+      "difficulty": "N5",
+      "hint": "I like him — topic marker"
+    },
+    {
+      "prompt": "サッカー___上手ですね。",
+      "romaji": "Sakkaa ___ jouzu desu ne.",
+      "answer": "は",
+      "answerRomaji": "wa",
+      "difficulty": "N5",
+      "hint": "Soccer — topic marker"
+    },
+    {
+      "prompt": "年上の人___敬語を使います。",
+      "romaji": "Toshiue no hito ___ keigo wo tsukaimasu.",
+      "answer": "に",
+      "answerRomaji": "ni",
+      "difficulty": "N5",
+      "hint": "Use polite language toward whom?"
+    },
+    {
+      "prompt": "週末___買い物に行きました。",
+      "romaji": "Shuumatsu ___ kaimono ni ikimashita.",
+      "answer": "に",
+      "answerRomaji": "ni",
+      "difficulty": "N5",
+      "hint": "When did you go shopping?"
+    },
+    {
+      "prompt": "駅前___ラーメン屋があります。",
+      "romaji": "Ekimae ___ ramen ya ga arimasu.",
+      "answer": "に",
+      "answerRomaji": "ni",
+      "difficulty": "N5",
+      "hint": "Ramen shop is where?"
+    },
+    {
+      "prompt": "鉛筆___書きます。",
+      "romaji": "Enpitsu ___ kakimasu.",
+      "answer": "で",
+      "answerRomaji": "de",
+      "difficulty": "N5",
+      "hint": "Writing with what?"
+    },
+    {
+      "prompt": "両親___一緒に暮らしています。",
+      "romaji": "Ryoushin ___ issho ni kurashite imasu.",
+      "answer": "と",
+      "answerRomaji": "to",
+      "difficulty": "N5",
+      "hint": "Living together with whom?"
+    },
+    {
+      "prompt": "去年___日本___行きました。",
+      "romaji": "Kyonen ___ nihon ___ ikimashita.",
+      "answer": "に",
+      "answerRomaji": "ni",
+      "difficulty": "N5",
+      "hint": "Went to where?"
+    },
+    {
+      "prompt": "この仕事___できません。",
+      "romaji": "Kono shigoto ___ dekimasen.",
+      "answer": "は",
+      "answerRomaji": "wa",
+      "difficulty": "N5",
+      "hint": "I cannot do this job — topic marker"
+    },
+    {
+      "prompt": "何___食べたいですか？",
+      "romaji": "Nani ___ tabetai desu ka?",
+      "answer": "を",
+      "answerRomaji": "wo",
+      "difficulty": "N5",
+      "hint": "What do you want to eat?"
+    },
+    {
+      "prompt": "日本語___上手になりたいです。",
+      "romaji": "Nihongo ___ jouzu ni naritai desu.",
+      "answer": "が",
+      "answerRomaji": "ga",
+      "difficulty": "N5",
+      "hint": "Want to become good at what?"
     }
   ]
 }
