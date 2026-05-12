@@ -238,7 +238,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
             <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
             <a href={cheatsheetUrl} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium text-muted hover:text-fg-secondary hover:bg-surface-2 transition-all no-underline">
-              Cheatsheet
+              <Icon icon="mdi:book-open-variant" className="w-4 h-4" /> Cheatsheet
             </a>
           </>
         )}
