@@ -1,5 +1,7 @@
 # Dojo
 
+<img src="https://raw.githubusercontent.com/[username]/[repo]/main/public/logo.svg" alt="Dojo Logo" width="32" align="right">
+
 Japanese grammar learning platform — interactive drills with instant feedback.
 
 ## Tech Stack
