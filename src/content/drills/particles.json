@@ -12,7 +12,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Topic marker — identifying the subject"
+      "hint": "Topic marker — identifying the subject",
+      "reading": "わたし___がくせいです。"
     },
     {
       "prompt": "猫___ここにいます。",
@@ -20,7 +21,8 @@
       "answer": "が",
       "answerRomaji": "ga",
       "difficulty": "N5",
-      "hint": "Subject marker — answering 'who/what is here?'"
+      "hint": "Subject marker — answering 'who/what is here?'",
+      "reading": "ねこ___ここにいます。"
     },
     {
       "prompt": "水___飲みます。",
@@ -28,7 +30,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "Object marker — direct object of action"
+      "hint": "Object marker — direct object of action",
+      "reading": "みず___のみます。"
     },
     {
       "prompt": "学校___行きます。",
@@ -36,7 +39,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Destination marker — where to go"
+      "hint": "Destination marker — where to go",
+      "reading": "がっこう___いきます。"
     },
     {
       "prompt": "天気___いいですね。",
@@ -44,7 +48,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Topic marker — commenting on the weather"
+      "hint": "Topic marker — commenting on the weather",
+      "reading": "てんき___いいですね。"
     },
     {
       "prompt": "誰___来ましたか？",
@@ -52,7 +57,8 @@
       "answer": "が",
       "answerRomaji": "ga",
       "difficulty": "N5",
-      "hint": "Subject marker — answering 'who came?'"
+      "hint": "Subject marker — answering 'who came?'",
+      "reading": "だれ___きましたか？"
     },
     {
       "prompt": "毎日、日本語___勉強します。",
@@ -60,7 +66,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "Object marker — what subject to study"
+      "hint": "Object marker — what subject to study",
+      "reading": "まいにち、にほんご___べんきょうします。"
     },
     {
       "prompt": "公園___友達___会いました。",
@@ -68,7 +75,8 @@
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
-      "hint": "Location marker — where the action took place"
+      "hint": "Location marker — where the action took place",
+      "reading": "こうえん___ともだち___あいました。"
     },
     {
       "prompt": "コーヒー___好きですか？",
@@ -76,7 +84,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Topic marker — question about coffee"
+      "hint": "Topic marker — question about coffee",
+      "reading": "こおひい___すきですか？"
     },
     {
       "prompt": "昨日、テレビ___見ました。",
@@ -84,7 +93,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "Object marker — what did you watch"
+      "hint": "Object marker — what did you watch",
+      "reading": "きのう、てれび___みました。"
     },
     {
       "prompt": "病院___働いています。",
@@ -92,7 +102,8 @@
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
-      "hint": "Location marker — where someone works"
+      "hint": "Location marker — where someone works",
+      "reading": "びょういん___はたらいています。"
     },
     {
       "prompt": "誰___一番背が高いですか？",
@@ -100,7 +111,8 @@
       "answer": "が",
       "answerRomaji": "ga",
       "difficulty": "N5",
-      "hint": "Subject marker — asking 'who is the tallest'"
+      "hint": "Subject marker — asking 'who is the tallest'",
+      "reading": "だれ___いちばんせがたかいですか？"
     },
     {
       "prompt": "明日、映画___見に行きます。",
@@ -108,7 +120,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "Object marker — what movie to watch"
+      "hint": "Object marker — what movie to watch",
+      "reading": "あした、えいが___みにいきます。"
     },
     {
       "prompt": "東京___住んでいます。",
@@ -116,7 +129,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Location marker — where someone lives/resides"
+      "hint": "Location marker — where someone lives/resides",
+      "reading": "とうきょう___すんでいます。"
     },
     {
       "prompt": "猫___魚を食べます。",
@@ -124,7 +138,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Topic marker for the cat"
+      "hint": "Topic marker for the cat",
+      "reading": "ねこ___さかなをたべます。"
     },
     {
       "prompt": "私___日本語を勉強します。",
@@ -132,7 +147,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Topic marker"
+      "hint": "Topic marker",
+      "reading": "わたし___にほんごをべんきょうします。"
     },
     {
       "prompt": "彼___昨日来ました。",
@@ -140,7 +156,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Topic marker (not が)"
+      "hint": "Topic marker (not が)",
+      "reading": "かれ___きのうきました。"
     },
     {
       "prompt": "これ___何ですか。",
@@ -148,7 +165,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "What is this? は asks"
+      "hint": "What is this? は asks",
+      "reading": "これ___なにですか。"
     },
     {
       "prompt": "本___読みます。",
@@ -156,7 +174,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "Direct object marker"
+      "hint": "Direct object marker",
+      "reading": "ほん___よみます。"
     },
     {
       "prompt": "コーヒー___飲みますか。",
@@ -164,7 +183,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "Drinking what? を marks object"
+      "hint": "Drinking what? を marks object",
+      "reading": "こおひい___のみますか。"
     },
     {
       "prompt": "映画___見ました。",
@@ -172,7 +192,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "Saw what? を marks object"
+      "hint": "Saw what? を marks object",
+      "reading": "えいが___みました。"
     },
     {
       "prompt": "学校___行きます。",
@@ -180,7 +201,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Destination marker"
+      "hint": "Destination marker",
+      "reading": "がっこう___いきます。"
     },
     {
       "prompt": "駅___降ります。",
@@ -188,7 +210,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Getting off at where?"
+      "hint": "Getting off at where?",
+      "reading": "えき___おります。"
     },
     {
       "prompt": "図書館___本を読みます。",
@@ -196,7 +219,8 @@
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
-      "hint": "Location of action (reading)"
+      "hint": "Location of action (reading)",
+      "reading": "としょかん___ほんをよみます。"
     },
     {
       "prompt": "駅___電車を待ちます。",
@@ -204,7 +228,8 @@
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
-      "hint": "Waiting where?"
+      "hint": "Waiting where?",
+      "reading": "えき___でんしゃをまちます。"
     },
     {
       "prompt": "レストラン___ランチを食べます。",
@@ -212,7 +237,8 @@
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
-      "hint": "Eating where?"
+      "hint": "Eating where?",
+      "reading": "れすとらん___らんちをたべます。"
     },
     {
       "prompt": "友達___映画を見ます。",
@@ -220,7 +246,8 @@
       "answer": "と",
       "answerRomaji": "to",
       "difficulty": "N5",
-      "hint": "With whom?"
+      "hint": "With whom?",
+      "reading": "ともだち___えいがをみます。"
     },
     {
       "prompt": "先生___話します。",
@@ -228,7 +255,8 @@
       "answer": "と",
       "answerRomaji": "to",
       "difficulty": "N5",
-      "hint": "Talking with whom?"
+      "hint": "Talking with whom?",
+      "reading": "せんせい___はなします。"
     },
     {
       "prompt": "部屋___猫がいます。",
@@ -236,7 +264,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Cat is in what room?"
+      "hint": "Cat is in what room?",
+      "reading": "へや___ねこがいます。"
     },
     {
       "prompt": "机___本があります。",
@@ -244,7 +273,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Book is on the desk"
+      "hint": "Book is on the desk",
+      "reading": "つくえ___ほんがあります。"
     },
     {
       "prompt": "お母さん___料理を作ります。",
@@ -252,7 +282,8 @@
       "answer": "が",
       "answerRomaji": "ga",
       "difficulty": "N5",
-      "hint": "Mother cooks — who does it?"
+      "hint": "Mother cooks — who does it?",
+      "reading": "おかあさん___りょうりをつくります。"
     },
     {
       "prompt": "兄弟___三人です。",
@@ -260,7 +291,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Topic marker — siblings"
+      "hint": "Topic marker — siblings",
+      "reading": "きょうだい___さんにんです。"
     },
     {
       "prompt": "姉___学生で、妹___会社員です。",
@@ -268,7 +300,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Topic marker — contrasting older and younger sister"
+      "hint": "Topic marker — contrasting older and younger sister",
+      "reading": "あね___がくせいで、いもうと___かいしゃいんです。"
     },
     {
       "prompt": "毎朝___ジョギングをします。",
@@ -276,7 +309,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "What do you do in the morning?"
+      "hint": "What do you do in the morning?",
+      "reading": "まいあさ___じょっぎんgをします。"
     },
     {
       "prompt": "友達___手紙を書きました。",
@@ -284,7 +318,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Wrote a letter to whom?"
+      "hint": "Wrote a letter to whom?",
+      "reading": "ともだち___てがみをかきました。"
     },
     {
       "prompt": "兄___弟___教えます。",
@@ -292,7 +327,8 @@
       "answer": "が",
       "answerRomaji": "ga",
       "difficulty": "N5",
-      "hint": "Brother teaches little brother — who teaches?"
+      "hint": "Brother teaches little brother — who teaches?",
+      "reading": "あに___おとと___おしえます。"
     },
     {
       "prompt": "パン___買いました。",
@@ -300,7 +336,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "Bought what?"
+      "hint": "Bought what?",
+      "reading": "ぱん___かいました。"
     },
     {
       "prompt": "カフェ___休みます。",
@@ -308,7 +345,8 @@
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
-      "hint": "Resting where?"
+      "hint": "Resting where?",
+      "reading": "かふぇ___やすみます。"
     },
     {
       "prompt": "誰___来ましたか？",
@@ -316,7 +354,8 @@
       "answer": "が",
       "answerRomaji": "ga",
       "difficulty": "N5",
-      "hint": "Who came?"
+      "hint": "Who came?",
+      "reading": "だれ___きましたか？"
     },
     {
       "prompt": "私___彼___好きです。",
@@ -324,7 +363,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "I like him — topic marker"
+      "hint": "I like him — topic marker",
+      "reading": "わたし___かれ___すきです。"
     },
     {
       "prompt": "サッカー___上手ですね。",
@@ -332,7 +372,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "Soccer — topic marker"
+      "hint": "Soccer — topic marker",
+      "reading": "さっかあ___じょうずですね。"
     },
     {
       "prompt": "年上の人___敬語を使います。",
@@ -340,7 +381,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Use polite language toward whom?"
+      "hint": "Use polite language toward whom?",
+      "reading": "としうえのひと___けいごをつかいます。"
     },
     {
       "prompt": "週末___買い物に行きました。",
@@ -348,7 +390,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "When did you go shopping?"
+      "hint": "When did you go shopping?",
+      "reading": "しゅうまつ___かいものにいきました。"
     },
     {
       "prompt": "駅前___ラーメン屋があります。",
@@ -356,7 +399,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Ramen shop is where?"
+      "hint": "Ramen shop is where?",
+      "reading": "えきまえ___らめんやがあります。"
     },
     {
       "prompt": "鉛筆___書きます。",
@@ -364,7 +408,8 @@
       "answer": "で",
       "answerRomaji": "de",
       "difficulty": "N5",
-      "hint": "Writing with what?"
+      "hint": "Writing with what?",
+      "reading": "えんぴつ___かきます。"
     },
     {
       "prompt": "両親___一緒に暮らしています。",
@@ -372,7 +417,8 @@
       "answer": "と",
       "answerRomaji": "to",
       "difficulty": "N5",
-      "hint": "Living together with whom?"
+      "hint": "Living together with whom?",
+      "reading": "りょうしん___いっしょにくらしています。"
     },
     {
       "prompt": "去年___日本___行きました。",
@@ -380,7 +426,8 @@
       "answer": "に",
       "answerRomaji": "ni",
       "difficulty": "N5",
-      "hint": "Went to where?"
+      "hint": "Went to where?",
+      "reading": "きょねん___にほん___いきました。"
     },
     {
       "prompt": "この仕事___できません。",
@@ -388,7 +435,8 @@
       "answer": "は",
       "answerRomaji": "wa",
       "difficulty": "N5",
-      "hint": "I cannot do this job — topic marker"
+      "hint": "I cannot do this job — topic marker",
+      "reading": "このしごと___できません。"
     },
     {
       "prompt": "何___食べたいですか？",
@@ -396,7 +444,8 @@
       "answer": "を",
       "answerRomaji": "wo",
       "difficulty": "N5",
-      "hint": "What do you want to eat?"
+      "hint": "What do you want to eat?",
+      "reading": "なに___たべたいですか？"
     },
     {
       "prompt": "日本語___上手になりたいです。",
@@ -404,7 +453,8 @@
       "answer": "が",
       "answerRomaji": "ga",
       "difficulty": "N5",
-      "hint": "Want to become good at what?"
+      "hint": "Want to become good at what?",
+      "reading": "にほんご___じょうずになりたいです。"
     }
   ]
 }
