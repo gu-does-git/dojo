@@ -18,6 +18,8 @@ const drillsCollection = defineCollection({
         romaji: z.string(),
         answer: z.string(),
         answerRomaji: z.string(),
+        politeAnswer: z.string().optional(),
+        politeAnswerRomaji: z.string().optional(),
         difficulty: z.enum(['N5', 'N4', 'N3', 'N2', 'N1']).optional(),
         hint: z.string().optional(),
       })

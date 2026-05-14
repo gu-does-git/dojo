@@ -11,6 +11,8 @@ interface Question {
   romaji: string;
   answer: string;
   answerRomaji: string;
+  politeAnswer?: string;
+  politeAnswerRomaji?: string;
   difficulty?: 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
   hint?: string;
 }
@@ -33,6 +35,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
   const [isCorrect, setIsCorrect] = useState(false);
   const [reversed, setReversed] = useState(false);
   const [showFurigana, setShowFurigana] = useState(true);
+  const [polite, setPolite] = useState(false);
   const [showRomaji, setShowRomaji] = useState(true);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
@@ -50,10 +53,12 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
   }, [phase]);
 
   const currentQuestion = shuffled[currentIdx];
-  const displayPrompt = reversed ? currentQuestion.answer : currentQuestion.prompt;
-  const displayRomaji = reversed ? currentQuestion.answerRomaji : currentQuestion.romaji;
+  const activeAnswer = polite ? (currentQuestion.politeAnswer ?? currentQuestion.answer) : currentQuestion.answer;
+  const activeAnswerRomaji = polite ? (currentQuestion.politeAnswerRomaji ?? currentQuestion.answerRomaji) : currentQuestion.answerRomaji;
+  const displayPrompt = reversed ? activeAnswer : currentQuestion.prompt;
+  const displayRomaji = reversed ? activeAnswerRomaji : currentQuestion.romaji;
   const furigana = toHiragana(displayRomaji);
-  const correctRomaji = reversed ? currentQuestion.romaji : currentQuestion.answerRomaji;
+  const correctRomaji = reversed ? currentQuestion.romaji : activeAnswerRomaji;
   const percentage = Math.round((score / shuffled.length) * 100);
 
   useEffect(() => {
@@ -71,6 +76,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
       if (e.key === 'r') setReversed(v => !v);
       if (e.key === 'f') setShowFurigana(v => !v);
       if (e.key === 'o') setShowRomaji(v => !v);
+      if (e.key === 'p') setPolite(v => !v);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -109,7 +115,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
   const handleRestart = () => {
     setCurrentIdx(0); setScore(0); setWrongCount(0); setInput('');
     if (inputRef.current) inputRef.current.value = '';
-    setPhase('answering'); setReversed(false); setShowFurigana(true); setShowRomaji(true);
+    setPhase('answering'); setReversed(false); setPolite(false); setShowFurigana(true); setShowRomaji(true);
     setStreak(0); setToast(null); setResults([]);
   };
 
@@ -226,6 +232,18 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
             <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
           </>
         )}
+        {currentQuestion?.politeAnswer && (
+          <>
+            <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
+            <button onClick={() => setPolite(v => !v)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer ${polite ? 'text-accent bg-accent-soft' : 'text-muted hover:text-fg-secondary hover:bg-surface-2'}`}>
+              <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${polite ? 'bg-accent' : 'bg-surface-3'}`}>
+                <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${polite ? 'translate-x-full' : '-translate-x-0.5'}`} />
+              </span>
+              敬 Polite
+            </button>
+          </>
+        )}
         <button onClick={() => setShowRomaji(v => !v)}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer ${showRomaji ? 'text-accent bg-accent-soft' : 'text-muted hover:text-fg-secondary hover:bg-surface-2'}`}>
           <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showRomaji ? 'bg-accent' : 'bg-surface-3'}`}>
@@ -320,7 +338,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
               {!isCorrect && (
                 <>
                   <p className="mb-2">You typed: <code className="font-mono text-sm bg-white/5 px-1.5 py-0.5 rounded">{input}</code></p>
-                  <p className="mb-2">The correct answer is <strong className="text-success font-bold"><FuriganaText word={reversed ? currentQuestion.prompt : currentQuestion.answer} reading={toHiragana(reversed ? currentQuestion.romaji : currentQuestion.answerRomaji)} showFuri={showFurigana} /></strong></p>
+                  <p className="mb-2">The correct answer is <strong className="text-success font-bold"><FuriganaText word={reversed ? currentQuestion.prompt : activeAnswer} reading={toHiragana(reversed ? currentQuestion.romaji : activeAnswerRomaji)} showFuri={showFurigana} /></strong></p>
                 </>
               )}
               {currentQuestion.hint && (
