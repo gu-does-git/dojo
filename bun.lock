@@ -27,6 +27,7 @@
         "@types/canvas-confetti": "^1.9.0",
         "@unocss/astro": "^66.6.8",
         "husky": "^9.1.7",
+        "typescript-language-server": "^5.2.0",
         "unocss": "^66.6.8",
       },
     },
@@ -1119,6 +1120,8 @@
     "type-level-regexp": ["type-level-regexp@0.1.17", "", {}, "sha512-wTk4DH3cxwk196uGLK/E9pE45aLfeKJacKmcEgEOA/q5dnPGNxXt0cfYdFxb57L+sEpf1oJH4Dnx/pnRcku9jg=="],
 
     "typescript": ["typescript@6.0.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw=="],
+
+    "typescript-language-server": ["typescript-language-server@5.2.0", "", { "bin": { "typescript-language-server": "lib/cli.mjs" } }, "sha512-K+Fu46SgN+bzh0sbKk04hFHq0kWCljvBN9iHx6ej6pXHigrV6H9W/LENIliEkiUVoymiLmEotEBE2XHYnQCo1w=="],
 
     "ufo": ["ufo@1.6.4", "", {}, "sha512-JFNbkD1Svwe0KvGi8GOeLcP4kAWQ609twvCdcHxq1oSL8svv39ZuSvajcD8B+5D0eL4+s1Is2D/O6KN3qcTeRA=="],
 
