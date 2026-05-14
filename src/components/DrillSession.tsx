@@ -223,7 +223,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
         </div>
         {drillType !== 'particles' && (
         <div className="flex items-center justify-center">
-            <button onClick={() => { handleRestart(); setReversed(v => !v); }}
+            <button onClick={() => setReversed(v => !v)}
               className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${reversed ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
               <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${reversed ? 'bg-accent' : 'bg-surface-3'}`}>
                 <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${reversed ? 'translate-x-full' : '-translate-x-0.5'}`} />
