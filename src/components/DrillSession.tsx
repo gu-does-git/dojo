@@ -26,7 +26,7 @@ interface Props {
 type Phase = 'answering' | 'feedback' | 'complete';
 
 export default function DrillSession({ questions, cheatsheetUrl, drillType }: Props) {
-  const [shuffled] = useState(() => questions);
+  const [shuffled] = useState(() => { const a = [...questions]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; });
   const [currentIdx, setCurrentIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [wrongCount, setWrongCount] = useState(0);
