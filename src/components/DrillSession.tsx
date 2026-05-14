@@ -211,46 +211,47 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
       </div>
 
       {/* Toggle Bar */}
-      <div className="flex items-center gap-1 flex-wrap mb-5 px-3.5 py-2.5 bg-surface border border-border rounded-lg">
-        <button onClick={() => setShowFurigana(v => !v)}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer ${showFurigana ? 'text-accent bg-accent-soft' : 'text-muted hover:text-fg-secondary hover:bg-surface-2'}`}>
-          <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showFurigana ? 'bg-accent' : 'bg-surface-3'}`}>
-            <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${showFurigana ? 'translate-x-full' : '-translate-x-0.5'}`} />
-          </span>
-          あ Furigana
-        </button>
-        <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
+      <div className="grid grid-cols-4 gap-3 mb-5 p-3 bg-surface border border-border rounded-lg">
+        <div className="flex items-center justify-center">
+          <button onClick={() => setShowFurigana(v => !v)}
+            className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${showFurigana ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
+            <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showFurigana ? 'bg-accent' : 'bg-surface-3'}`}>
+              <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${showFurigana ? 'translate-x-full' : '-translate-x-0.5'}`} />
+            </span>
+            あ Furigana
+          </button>
+        </div>
         {drillType !== 'particles' && (
-          <>
+        <div className="flex items-center justify-center">
             <button onClick={() => { handleRestart(); setReversed(v => !v); }}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer ${reversed ? 'text-accent bg-accent-soft' : 'text-muted hover:text-fg-secondary hover:bg-surface-2'}`}>
+              className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${reversed ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
               <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${reversed ? 'bg-accent' : 'bg-surface-3'}`}>
                 <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${reversed ? 'translate-x-full' : '-translate-x-0.5'}`} />
               </span>
               ⇄ Reverse
             </button>
-            <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
-          </>
+          </div>
         )}
         {currentQuestion?.politeAnswer && (
-          <>
+        <div className="flex items-center justify-center">
             <button onClick={() => setPolite(v => !v)}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer ${polite ? 'text-accent bg-accent-soft' : 'text-muted hover:text-fg-secondary hover:bg-surface-2'}`}>
+              className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${polite ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
               <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${polite ? 'bg-accent' : 'bg-surface-3'}`}>
                 <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${polite ? 'translate-x-full' : '-translate-x-0.5'}`} />
               </span>
               敬 Polite
             </button>
-            <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
-          </>
+          </div>
         )}
-        <button onClick={() => setShowRomaji(v => !v)}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer ${showRomaji ? 'text-accent bg-accent-soft' : 'text-muted hover:text-fg-secondary hover:bg-surface-2'}`}>
-          <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showRomaji ? 'bg-accent' : 'bg-surface-3'}`}>
-            <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${showRomaji ? 'translate-x-full' : '-translate-x-0.5'}`} />
-          </span>
-          EN Romaji
-        </button>
+        <div className="flex items-center justify-center">
+          <button onClick={() => setShowRomaji(v => !v)}
+            className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${showRomaji ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
+            <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showRomaji ? 'bg-accent' : 'bg-surface-3'}`}>
+              <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${showRomaji ? 'translate-x-full' : '-translate-x-0.5'}`} />
+            </span>
+            EN Romaji
+          </button>
+        </div>
       </div>
 
       {phase === 'answering' && (
