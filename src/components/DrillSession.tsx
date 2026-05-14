@@ -234,7 +234,6 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
         )}
         {currentQuestion?.politeAnswer && (
           <>
-            <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
             <button onClick={() => setPolite(v => !v)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer ${polite ? 'text-accent bg-accent-soft' : 'text-muted hover:text-fg-secondary hover:bg-surface-2'}`}>
               <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${polite ? 'bg-accent' : 'bg-surface-3'}`}>
@@ -242,6 +241,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
               </span>
               敬 Polite
             </button>
+            <div className="hidden md:block w-px h-4 bg-border-strong mx-0.5" />
           </>
         )}
         <button onClick={() => setShowRomaji(v => !v)}
