@@ -1,0 +1,17 @@
+---
+description: Never run build — user keeps dev server running for testing
+alwaysApply: true
+globs: 
+  - "*"
+---
+
+# Dev Server Testing
+
+**Never run `bun run build` or any build command.** The user already runs `bun run dev` in a separate terminal.
+
+When you need to verify changes:
+- Assume the dev server is already running on `http://localhost:4321`
+- Check it with the browser tool if visual confirmation needed
+- Rely on `git diff` and file review for correctness
+
+**Never** call `recipe` with `op: "build"` or invoke `bun run build` via bash.
