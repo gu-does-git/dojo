@@ -1,0 +1,66 @@
+{
+  // === UI / Aparência ===
+  "workbench.colorTheme": "GrayJack's Catppuccin Macchiatto",
+  "workbench.iconTheme": "catppuccin noctis icons",
+  "workbench.sideBar.location": "right",
+  "window.commandCenter": false,
+
+  // === Editor ===
+  "editor.fontFamily": "'GeistMono NFM', 'JetBrains Mono', 'Fira Code', 'Droid Sans Mono', monospace",
+  "editor.fontSize": 13,
+  "editor.lineHeight": 1.6,
+  "editor.letterSpacing": 0.3,
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "selection",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // === Explorer ===
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
+
+  // === Terminal ===
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.lineHeight": 1.4,
+  "terminal.integrated.cursorBlinking": true,
+  "debug.console.fontSize": 12,
+  "chat.editor.fontSize": 12.5,
+
+  // === Projeto: Dojo (Astro + React + TS + Tailwind) ===
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["class:\\s*\"([^\"]*)\""],
+    ["className:\\s*\"([^\"]*)\""]
+  ],
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // === Git ===
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true
+}
