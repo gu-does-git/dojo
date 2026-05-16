@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const drills = await getCollection('drills');
 
@@ -92,11 +93,6 @@ function getCount(drills: any[], type: string) {
       </div>
     </section>
 
-    {/* Footer */}
-    <footer class="border-t border-border mt-12">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 text-center">
-        <p class="text-sm text-muted">Dojo — Interactive Japanese Grammar Learning</p>
-      </div>
-    </footer>
+    <Footer />
   </main>
 </BaseLayout>
