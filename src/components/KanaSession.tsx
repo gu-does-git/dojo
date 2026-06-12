@@ -224,8 +224,6 @@ export default function KanaSession() {
     };
   }, [chartOpen]);
 
-  if (!mounted) return <LoaderSVG />;
-
   // Quiz keyboard shortcuts
   useEffect(() => {
     if (phase !== 'quiz') return;
@@ -242,6 +240,8 @@ export default function KanaSession() {
     window.addEventListener('keydown', onKey, { capture: true });
     return () => window.removeEventListener('keydown', onKey, { capture: true } as EventListenerOptions);
   }, [phase, current, index, chartOpen]);
+
+  if (!mounted) return <LoaderSVG />;
 
   // ─── Chart Modal ───
   const renderChartModal = () => {
