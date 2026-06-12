@@ -8,9 +8,9 @@ import { KANA, type Kana, type KanaScript, type KanaGroup } from '../data/kana';
 
 const KANA_CHARTS = {
   hiragana: { src: '/kana-hiragana-chart.png', author: 'Tofugu', sourceUrl: 'https://www.tofugu.com/japanese/hiragana-mnemonics-chart/', alt: 'Hiragana mnemonic chart' },
-  katakana: { src: '/kana-katakana-chart.png', author: 'TBD', sourceUrl: '', alt: 'Katakana mnemonic chart' },
   katakana: { src: '/kana-katakana-chart.png', author: 'Tofugu', sourceUrl: 'https://www.tofugu.com/japanese/katakana-chart/', alt: 'Katakana mnemonic chart' },
 } as const;
+type Chart = { src: string; author: string; sourceUrl: string; alt: string };
 
 const ALTERNATES: Record<string, string[]> = {
   'ん': ['n', 'nn'], 'ン': ['n', 'nn'],
@@ -215,7 +215,7 @@ export default function KanaSession() {
   // ─── Chart Modal ───
   const renderChartModal = () => {
     if (!chartOpen) return null;
-    const chart = KANA_CHARTS[chartOpen];
+    const chart: Chart = chartOpen === 'hiragana' ? KANA_CHARTS.hiragana : KANA_CHARTS.katakana;
     const title = chartOpen === 'hiragana' ? 'Hiragana chart' : 'Katakana chart';
     return (
       <div
@@ -251,11 +251,30 @@ export default function KanaSession() {
 
   // ─── Setup Phase ───
   if (phase === 'setup') {
-    const sectionTitle = (script: KanaScript, group: KanaGroup) => {
-      const scriptLabel = script === 'hiragana' ? 'Hiragana' : 'Katakana';
-      const groupLabel = group === 'main' ? 'Main' : group === 'dakuten' ? 'Dakuten' : 'Combination';
-      return `${scriptLabel} — ${groupLabel} Kana`;
+    const groupAccentClass = (group: KanaGroup) => {
+      switch (group) {
+        case 'main': return 'text-accent';
+        case 'dakuten': return 'text-success';
+        case 'combination': return 'text-gold';
+      }
     };
+
+    const KanaRowTile = ({ row, allSelected, onToggle }: { row: { rowChar: string; items: Kana[] }; allSelected: boolean; onToggle: () => void }) => (
+      <button onClick={onToggle} type="button" aria-pressed={allSelected}
+        className={`relative flex flex-col items-center justify-center py-2.5 px-2 rounded-lg border transition-all cursor-pointer ${allSelected ? 'bg-accent-soft border-accent' : 'bg-surface-2 border-border hover:border-border-strong hover:bg-surface-3'}`}>
+        <span style={{ fontFamily: 'var(--font-jp)' }} className="text-2xl leading-none mb-0.5">
+          {row.rowChar}
+        </span>
+        <span className="text-[10px] uppercase tracking-wider text-muted/70">
+          {row.items[0].romaji}
+        </span>
+        {allSelected && (
+          <Icon icon="mdi:check" className="w-3 h-3 text-accent absolute -top-1 -right-1" />
+        )}
+      </button>
+    );
+
+    const scripts: KanaScript[] = ['hiragana', 'katakana'];
 
     return (
       <div className="animate-fade-in">
@@ -277,51 +296,68 @@ export default function KanaSession() {
           </button>
         </div>
 
-        {/* All Kana master toggle */}
-        <label className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border cursor-pointer transition-all mb-6 ${allSelected ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary'}`}>
-          <input type="checkbox" className="hidden" checked={allSelected} onChange={toggleAllKana} />
-          <Icon icon={allSelected ? 'mdi:checkbox-marked' : 'mdi:checkbox-blank-outline'} className="w-4 h-4" />
-          All Kana
-        </label>
+        {/* Two-column script cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {scripts.map(script => {
+            const sections = groupedKana.filter(s => s.script === script);
+            const selectedCount = KANA.filter(k => k.script === script && selected.has(k.char)).length;
+            const scriptLabel = script === 'hiragana' ? 'Hiragana' : 'Katakana';
 
-        {/* Script sections */}
-        {groupedKana.map(section => {
-          const items = KANA.filter(k => k.script === section.script && k.group === section.group);
-          const sectionAllSelected = items.every(k => selected.has(k.char));
-          return (
-            <div key={`${section.script}-${section.group}`} className="mb-5">
-              <h3 className="text-fg font-semibold text-base mb-2">{sectionTitle(section.script, section.group)}</h3>
+            return (
+              <article key={script} className="bg-surface border border-border rounded-lg p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <h2 className="font-display text-xl font-semibold">{scriptLabel}</h2>
+                  <span className="text-xs text-muted">{selectedCount} selected</span>
+                </div>
 
-              {/* Group master toggle */}
-              <label className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border cursor-pointer transition-all mb-2 ${sectionAllSelected ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary'}`}>
-                <input type="checkbox" className="hidden" checked={sectionAllSelected} onChange={() => toggleGroup(section.script, section.group)} />
-                <Icon icon={sectionAllSelected ? 'mdi:checkbox-marked' : 'mdi:checkbox-blank-outline'} className="w-3.5 h-3.5" />
-                All {section.script === 'hiragana' ? 'Hiragana' : 'Katakana'} {section.group === 'main' ? 'Main' : section.group === 'dakuten' ? 'Dakuten' : 'Combination'} Kana
-              </label>
+                {sections.map(section => {
+                  const items = KANA.filter(k => k.script === section.script && k.group === section.group);
+                  const sectionAllSelected = items.every(k => selected.has(k.char));
+                  const groupLabel = section.group === 'main' ? 'Main' : section.group === 'dakuten' ? 'Dakuten' : 'Combination';
 
-              {/* Row checkboxes */}
-              <div className="flex flex-wrap gap-1.5 mt-1">
-                {section.rows.map(row => {
-                  const allRowSelected = row.items.every(k => selected.has(k.char));
                   return (
-                    <label key={row.rowChar}
-                      className={`inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium border cursor-pointer transition-all ${allRowSelected ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary'}`}>
-                      <input type="checkbox" className="hidden" checked={allRowSelected} onChange={() => toggleRow(section.script, section.group, row.rowChar)} />
-                      <span style={{ fontFamily: 'var(--font-jp)', fontWeight: 'bold' }}>{row.rowChar}</span>
-                      <span className="opacity-70">/ {row.items[0].romaji}</span>
-                    </label>
+                    <div key={section.group} className="mb-4 last:mb-0">
+                      <div className="flex items-center justify-between mb-2 mt-3 first:mt-0">
+                        <span className={`text-xs font-semibold uppercase tracking-wider ${groupAccentClass(section.group)}`}>
+                          {groupLabel}
+                        </span>
+                        <label className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium border cursor-pointer transition-all ${sectionAllSelected ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary'}`}>
+                          <input type="checkbox" className="hidden" checked={sectionAllSelected} onChange={() => toggleGroup(section.script, section.group)} />
+                          <Icon icon={sectionAllSelected ? 'mdi:checkbox-marked' : 'mdi:checkbox-blank-outline'} className="w-3 h-3" />
+                          All
+                        </label>
+                      </div>
+
+                      <div className="grid grid-cols-5 sm:grid-cols-6 gap-2">
+                        {section.rows.map(row => (
+                          <KanaRowTile
+                            key={row.rowChar}
+                            row={row}
+                            allSelected={row.items.every(k => selected.has(k.char))}
+                            onToggle={() => toggleRow(section.script, section.group, row.rowChar)}
+                          />
+                        ))}
+                      </div>
+                    </div>
                   );
                 })}
-              </div>
-            </div>
-          );
-        })}
+              </article>
+            );
+          })}
+        </div>
 
-        {/* Start button */}
-        <button onClick={handleStart} disabled={selected.size === 0}
-          className={`w-full py-3.5 rounded-lg text-base font-semibold transition-all cursor-pointer mt-6 ${selected.size === 0 ? 'bg-surface-3 text-muted opacity-50 cursor-not-allowed' : 'bg-accent text-white hover:brightness-112'}`}>
-          Start Quiz!
-        </button>
+        {/* All Kana + Start */}
+        <div className="flex items-center gap-3 mt-6">
+          <label className={`inline-flex items-center gap-2 px-4 py-3.5 rounded-lg text-sm font-semibold border cursor-pointer transition-all flex-1 justify-center ${allSelected ? 'text-accent bg-accent-soft border-transparent' : 'text-fg-secondary bg-surface-2 border-border-strong/40 hover:border-muted'}`}>
+            <input type="checkbox" className="hidden" checked={allSelected} onChange={toggleAllKana} />
+            <Icon icon={allSelected ? 'mdi:checkbox-marked' : 'mdi:checkbox-blank-outline'} className="w-4 h-4" />
+            All Kana
+          </label>
+          <button onClick={handleStart} disabled={selected.size === 0}
+            className={`flex-[2] py-3.5 rounded-lg text-base font-semibold transition-all cursor-pointer ${selected.size === 0 ? 'bg-surface-3 text-muted opacity-50 cursor-not-allowed' : 'bg-accent text-white hover:brightness-112'}`}>
+            Start Quiz!{selected.size > 0 && ` (${selected.size} kana)`}
+          </button>
+        </div>
 
         {renderChartModal()}
       </div>
