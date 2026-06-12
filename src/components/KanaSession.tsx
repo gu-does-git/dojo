@@ -180,6 +180,20 @@ export default function KanaSession() {
     setPhase('complete');
   };
 
+  const handleGiveUp = () => {
+    if (!current) return;
+    setStreak(0);
+    setResults(prev => ({ ...prev, [current.char]: (prev[current.char] || 0) + 1 }));
+    setInput('');
+    setShowHint(false);
+    if (inputRef.current) inputRef.current.value = '';
+    if (index + 1 < queue.length) {
+      setIndex(i => i + 1);
+    } else {
+      setPhase('complete');
+    }
+  };
+
   // ─── Effects ───
   useEffect(() => {
     if (phase === 'quiz' && inputRef.current) {
@@ -211,6 +225,23 @@ export default function KanaSession() {
   }, [chartOpen]);
 
   if (!mounted) return <LoaderSVG />;
+
+  // Quiz keyboard shortcuts
+  useEffect(() => {
+    if (phase !== 'quiz') return;
+    if (chartOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return;
+      switch (e.key.toLowerCase()) {
+        case 's': e.preventDefault(); e.stopPropagation(); if (current) speak(current.char); break;
+        case 'h': e.preventDefault(); e.stopPropagation(); setShowHint(v => !v); break;
+        case 'g': e.preventDefault(); e.stopPropagation(); handleGiveUp(); break;
+        case 'e': e.preventDefault(); e.stopPropagation(); handleEndEarly(); break;
+      }
+    };
+    window.addEventListener('keydown', onKey, { capture: true });
+    return () => window.removeEventListener('keydown', onKey, { capture: true } as EventListenerOptions);
+  }, [phase, current, index, chartOpen]);
 
   // ─── Chart Modal ───
   const renderChartModal = () => {
@@ -442,6 +473,26 @@ export default function KanaSession() {
         </button>
 
         {renderChartModal()}
+
+        {/* Keyboard shortcuts hint */}
+        <p className="text-xs text-muted text-center mt-4">
+          <span className="text-fg-secondary font-medium">Shortcuts:</span>{' '}
+          <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">Ctrl</kbd>
+          +
+          <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">S</kbd> speak
+          <span className="mx-1.5">·</span>
+          <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">Ctrl</kbd>
+          +
+          <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">H</kbd> hint
+          <span className="mx-1.5">·</span>
+          <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">Ctrl</kbd>
+          +
+          <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">G</kbd> give up
+          <span className="mx-1.5">·</span>
+          <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">Ctrl</kbd>
+          +
+          <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">E</kbd> end
+        </p>
 
         {/* Toast */}
         {toast && (
