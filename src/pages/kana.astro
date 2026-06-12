@@ -1,0 +1,7 @@
+---
+import DrillLayout from '../layouts/DrillLayout.astro';
+import KanaSession from '../components/KanaSession';
+---
+<DrillLayout title="Kana Practice — Dojo" current="kana" wide={true}>
+  <KanaSession client:load />
+</DrillLayout>
