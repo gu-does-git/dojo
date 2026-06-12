@@ -261,16 +261,11 @@ export default function KanaSession() {
 
     const KanaRowTile = ({ row, allSelected, onToggle }: { row: { rowChar: string; items: Kana[] }; allSelected: boolean; onToggle: () => void }) => (
       <button onClick={onToggle} type="button" aria-pressed={allSelected}
-        className={`relative flex flex-col items-center justify-center py-2.5 px-2 rounded-lg border transition-all cursor-pointer ${allSelected ? 'bg-accent-soft border-accent' : 'bg-surface-2 border-border hover:border-border-strong hover:bg-surface-3'}`}>
+        className={`flex flex-col items-center justify-center py-2.5 px-2 rounded-lg border transition-all cursor-pointer ${allSelected ? 'bg-accent-mid border-accent' : 'bg-surface-2 border-border hover:border-border-strong hover:bg-surface-3'}`}>
         <span style={{ fontFamily: 'var(--font-jp)' }} className="text-2xl leading-none mb-0.5">
           {row.rowChar}
         </span>
-        <span className="text-[10px] uppercase tracking-wider text-muted/70">
-          {row.items[0].romaji}
-        </span>
-        {allSelected && (
-          <Icon icon="mdi:check" className="w-3 h-3 text-accent absolute -top-1 -right-1" />
-        )}
+        {allSelected && <span className="text-[10px] uppercase tracking-wider text-muted/70 animate-fade-in">{row.items[0].romaji}</span>}
       </button>
     );
 
