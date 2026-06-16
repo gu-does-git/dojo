@@ -1,0 +1,391 @@
+{
+  "id": "dictionary-form",
+  "title": "Dictionary Form — Verbs",
+  "description": "Practice recognizing the dictionary (plain) form of verbs. Given a ます-form verb, type its dictionary form (e.g., 食べます → 食べる). Toggle 'Reverse' to practice the other direction.",
+  "level": "N5",
+  "type": "conjugation",
+  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/verb-form-dictionary/",
+  "questions": [
+    {
+      "prompt": "食べます",
+      "romaji": "tabemasu",
+      "answer": "食べる",
+      "answerRomaji": "taberu",
+      "difficulty": "N5",
+      "hint": "Drop ます from ます-form to get the dictionary form"
+    },
+    {
+      "prompt": "見ます",
+      "romaji": "mimasu",
+      "answer": "見る",
+      "answerRomaji": "miru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "起きます",
+      "romaji": "okimasu",
+      "answer": "起きる",
+      "answerRomaji": "okiru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "寝ます",
+      "romaji": "nemasu",
+      "answer": "寝る",
+      "answerRomaji": "neru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "教えます",
+      "romaji": "oshiemasu",
+      "answer": "教える",
+      "answerRomaji": "oshieru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "考えます",
+      "romaji": "kangaemasu",
+      "answer": "考える",
+      "answerRomaji": "kangaeru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "浴びます",
+      "romaji": "abimasu",
+      "answer": "浴びる",
+      "answerRomaji": "abiru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "着ます",
+      "romaji": "kimasu",
+      "answer": "着る",
+      "answerRomaji": "kiru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "忘れます",
+      "romaji": "wasuremasu",
+      "answer": "忘れる",
+      "answerRomaji": "wasureru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "覚えます",
+      "romaji": "oboemasu",
+      "answer": "覚える",
+      "answerRomaji": "oboeru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "調べます",
+      "romaji": "shirabemasu",
+      "answer": "調べる",
+      "answerRomaji": "shiraberu",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "疲れます",
+      "romaji": "tsukaremasu",
+      "answer": "疲れる",
+      "answerRomaji": "tsukareru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "出ます",
+      "romaji": "demasu",
+      "answer": "出る",
+      "answerRomaji": "deru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan え-row)"
+    },
+    {
+      "prompt": "入ります",
+      "romaji": "hairimasu",
+      "answer": "入る",
+      "answerRomaji": "hairu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan あ-row)"
+    },
+    {
+      "prompt": "帰ります",
+      "romaji": "kaerimasu",
+      "answer": "帰る",
+      "answerRomaji": "kaeru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan え-row)"
+    },
+    {
+      "prompt": "分かります",
+      "romaji": "wakarimasu",
+      "answer": "分かる",
+      "answerRomaji": "wakaru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan あ-row)"
+    },
+    {
+      "prompt": "泳ぎます",
+      "romaji": "oyogimasu",
+      "answer": "泳ぐ",
+      "answerRomaji": "oyogu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ぐ"
+    },
+    {
+      "prompt": "待ちます",
+      "romaji": "machimasu",
+      "answer": "待つ",
+      "answerRomaji": "matsu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ち"
+    },
+    {
+      "prompt": "話します",
+      "romaji": "hanashimasu",
+      "answer": "話す",
+      "answerRomaji": "hanasu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in す"
+    },
+    {
+      "prompt": "読みます",
+      "romaji": "yomimasu",
+      "answer": "読む",
+      "answerRomaji": "yomu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in む"
+    },
+    {
+      "prompt": "書きます",
+      "romaji": "kakimasu",
+      "answer": "書く",
+      "answerRomaji": "kaku",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in く"
+    },
+    {
+      "prompt": "聞きます",
+      "romaji": "kikimasu",
+      "answer": "聞く",
+      "answerRomaji": "kiku",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in く"
+    },
+    {
+      "prompt": "買います",
+      "romaji": "kaimasu",
+      "answer": "買う",
+      "answerRomaji": "kau",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う"
+    },
+    {
+      "prompt": "会います",
+      "romaji": "aimasu",
+      "answer": "会う",
+      "answerRomaji": "au",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う"
+    },
+    {
+      "prompt": "歌います",
+      "romaji": "utaimasu",
+      "answer": "歌う",
+      "answerRomaji": "utau",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う"
+    },
+    {
+      "prompt": "使います",
+      "romaji": "tsukaimasu",
+      "answer": "使う",
+      "answerRomaji": "tsukau",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "遊びます",
+      "romaji": "asobimasu",
+      "answer": "遊ぶ",
+      "answerRomaji": "asobu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ぶ"
+    },
+    {
+      "prompt": "飲みます",
+      "romaji": "nomimasu",
+      "answer": "飲む",
+      "answerRomaji": "nomu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in む"
+    },
+    {
+      "prompt": "働きます",
+      "romaji": "hatarakimasu",
+      "answer": "働く",
+      "answerRomaji": "hataraku",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "作ります",
+      "romaji": "tsukurimasu",
+      "answer": "作る",
+      "answerRomaji": "tsukuru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan う-row)"
+    },
+    {
+      "prompt": "走ります",
+      "romaji": "hashirimasu",
+      "answer": "走る",
+      "answerRomaji": "hashiru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan あ-row)"
+    },
+    {
+      "prompt": "降ります",
+      "romaji": "furimasu",
+      "answer": "降る",
+      "answerRomaji": "furu",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "乗ります",
+      "romaji": "norimasu",
+      "answer": "乗る",
+      "answerRomaji": "noru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan あ-row)"
+    },
+    {
+      "prompt": "売ります",
+      "romaji": "urimasu",
+      "answer": "売る",
+      "answerRomaji": "uru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan う-row)"
+    },
+    {
+      "prompt": "習います",
+      "romaji": "naraimasu",
+      "answer": "習う",
+      "answerRomaji": "narau",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in う"
+    },
+    {
+      "prompt": "立ちます",
+      "romaji": "tachimasu",
+      "answer": "立つ",
+      "answerRomaji": "tatsu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in ち (t-sound)"
+    },
+    {
+      "prompt": "消します",
+      "romaji": "keshimasu",
+      "answer": "消す",
+      "answerRomaji": "kesu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in す"
+    },
+    {
+      "prompt": "休みます",
+      "romaji": "yasumimasu",
+      "answer": "休む",
+      "answerRomaji": "yasumu",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in む"
+    },
+    {
+      "prompt": "始まります",
+      "romaji": "hajimarimasu",
+      "answer": "始まる",
+      "answerRomaji": "hajimaru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan あ-row, intransitive)"
+    },
+    {
+      "prompt": "終わります",
+      "romaji": "owarimasu",
+      "answer": "終わる",
+      "answerRomaji": "owaru",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in る (godan わ-row, intransitive)"
+    },
+    {
+      "prompt": "開きます",
+      "romaji": "hirakimasu",
+      "answer": "開く",
+      "answerRomaji": "hiraku",
+      "difficulty": "N5",
+      "hint": "Group 1 verb ending in く"
+    },
+    {
+      "prompt": "行きます",
+      "romaji": "ikimasu",
+      "answer": "行く",
+      "answerRomaji": "iku",
+      "difficulty": "N5",
+      "hint": "Irregular: く → って in て-form, but きます in ます-form"
+    },
+    {
+      "prompt": "勉強します",
+      "romaji": "benkyoushimasu",
+      "answer": "勉強する",
+      "answerRomaji": "benkyousuru",
+      "difficulty": "N5",
+      "hint": "する-verb: dictionary form is [noun] + する"
+    },
+    {
+      "prompt": "料理します",
+      "romaji": "ryourishimasu",
+      "answer": "料理する",
+      "answerRomaji": "ryourisuru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "散歩します",
+      "romaji": "sanposhimasu",
+      "answer": "散歩する",
+      "answerRomaji": "sanposuru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "運動します",
+      "romaji": "undoushimasu",
+      "answer": "運動する",
+      "answerRomaji": "undousuru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "洗濯します",
+      "romaji": "sentakushimasu",
+      "answer": "洗濯する",
+      "answerRomaji": "sentakusuru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "掃除します",
+      "romaji": "soujishimasu",
+      "answer": "掃除する",
+      "answerRomaji": "soujisuru",
+      "difficulty": "N5"
+    },
+    {
+      "prompt": "します",
+      "romaji": "shimasu",
+      "answer": "する",
+      "answerRomaji": "suru",
+      "difficulty": "N5",
+      "hint": "Irregular: する has dictionary form する (not す)"
+    },
+    {
+      "prompt": "来ます",
+      "romaji": "kimasu",
+      "answer": "来る",
+      "answerRomaji": "kuru",
+      "difficulty": "N5",
+      "hint": "Irregular: 来る is the dictionary form"
+    }
+  ]
+}
