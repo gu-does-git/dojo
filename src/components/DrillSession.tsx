@@ -14,6 +14,7 @@ interface Question {
   politeAnswer?: string;
   politeAnswerRomaji?: string;
   difficulty?: 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
+  tense?: string;
   hint?: string;
 }
 
@@ -26,7 +27,7 @@ interface Props {
 type Phase = 'answering' | 'feedback' | 'complete';
 
 export default function DrillSession({ questions, cheatsheetUrl, drillType }: Props) {
-  const [shuffled] = useState(() => { const a = [...questions]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; });
+  const [shuffled] = useState(() => { const a = [...questions]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; });
   const [currentIdx, setCurrentIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [wrongCount, setWrongCount] = useState(0);
@@ -37,6 +38,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
   const [showFurigana, setShowFurigana] = useState(true);
   const [polite, setPolite] = useState(false);
   const [showRomaji, setShowRomaji] = useState(true);
+  const [showTense, setShowTense] = useState(true);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [toast, setToast] = useState<string | null>(null);
@@ -116,6 +118,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
     setCurrentIdx(0); setScore(0); setWrongCount(0); setInput('');
     if (inputRef.current) inputRef.current.value = '';
     setPhase('answering'); setReversed(false); setPolite(false); setShowFurigana(true); setShowRomaji(true);
+    setShowTense(true);
     setStreak(0); setToast(null); setResults([]);
   };
 
@@ -160,11 +163,10 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-2 flex-1 min-w-0">
                     {r.question.difficulty && (
-                      <span className={`text-xs font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wide ${
-                        r.question.difficulty === 'N5' ? 'bg-success/15 text-success' :
+                      <span className={`text-xs font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wide ${r.question.difficulty === 'N5' ? 'bg-success/15 text-success' :
                         r.question.difficulty === 'N4' ? 'bg-accent-soft text-accent' :
-                        'bg-gold-soft text-gold'
-                      }`}>{r.question.difficulty}</span>
+                          'bg-gold-soft text-gold'
+                        }`}>{r.question.difficulty}</span>
                     )}
                     <span className="text-fg text-sm truncate">{r.question.prompt}</span>
                   </div>
@@ -211,7 +213,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
       </div>
 
       {/* Toggle Bar */}
-      <div className="grid grid-cols-4 gap-3 mb-5 p-3 bg-surface border border-border rounded-lg">
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-5 p-3 bg-surface border border-border rounded-lg">
         <div className="flex items-center justify-center">
           <button onClick={() => setShowFurigana(v => !v)}
             className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${showFurigana ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
@@ -222,7 +224,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
           </button>
         </div>
         {drillType !== 'particles' && (
-        <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <button onClick={() => setReversed(v => !v)}
               className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${reversed ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
               <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${reversed ? 'bg-accent' : 'bg-surface-3'}`}>
@@ -233,7 +235,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
           </div>
         )}
         {currentQuestion?.politeAnswer && (
-        <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <button onClick={() => setPolite(v => !v)}
               className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${polite ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
               <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${polite ? 'bg-accent' : 'bg-surface-3'}`}>
@@ -252,6 +254,17 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
             EN Romaji
           </button>
         </div>
+        {currentQuestion?.tense && (
+          <div className="flex items-center justify-center">
+            <button onClick={() => setShowTense(v => !v)}
+              className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${showTense ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
+              <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showTense ? 'bg-accent' : 'bg-surface-3'}`}>
+                <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${showTense ? 'translate-x-full' : '-translate-x-0.5'}`} />
+              </span>
+              時 Tense
+            </button>
+          </div>
+        )}
       </div>
 
       {phase === 'answering' && (
@@ -260,54 +273,60 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
           <div className="bg-surface border border-border rounded-lg p-5 sm:p-9 mb-5">
             <div className="flex items-center gap-2 mb-5">
               {currentQuestion.difficulty && (
-                <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                  currentQuestion.difficulty === 'N5' ? 'bg-success/15 text-success' :
+                <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${currentQuestion.difficulty === 'N5' ? 'bg-success/15 text-success' :
                   currentQuestion.difficulty === 'N4' ? 'bg-accent-soft text-accent' :
-                  'bg-gold-soft text-gold'
-                }`}>{currentQuestion.difficulty}</span>
+                    'bg-gold-soft text-gold'
+                  }`}>{currentQuestion.difficulty}</span>
+              )}
+              {showTense && currentQuestion.tense && (
+                <span className="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent border border-accent/20">
+                  {currentQuestion.tense}
+                </span>
               )}
               <span className="text-xs text-muted tabular-nums ml-auto">Q{currentIdx + 1}</span>
             </div>
             <div className="font-display text-2xl sm:text-4xl leading-tight mb-3">
               {currentQuestion.reading
                 ? (() => {
-                    const promptParts = displayPrompt.split('___');
-                    const readingParts = currentQuestion.reading.split('___');
-                    return (
-                      <span>
-                        {promptParts.map((part, i) => (
-                          <span key={i}>
-                            <FuriganaText word={part} reading={readingParts[i] ?? ''} showFuri={showFurigana} spacing="loose" rtMargin="mb-2" />
-                            {i < promptParts.length - 1 && (
-                              <span className="inline-block min-w-20 border-b-2 border-dashed border-accent mx-1 relative" />
-                            )}
-                          </span>
-                        ))}
-                      </span>
-                    );
-                  })()
+                  const promptParts = displayPrompt.split('___');
+                  const readingParts = currentQuestion.reading.split('___');
+                  return (
+                    <span>
+                      {promptParts.map((part, i) => (
+                        <span key={i}>
+                          <FuriganaText word={part} reading={readingParts[i] ?? ''} showFuri={showFurigana} spacing="loose" rtMargin="mb-2" />
+                          {i < promptParts.length - 1 && (
+                            <span className="inline-block min-w-20 border-b-2 border-dotted border-border text-muted font-bold text-center text-2xl leading-relaxed">?</span>
+                          )}
+                        </span>
+                      ))}
+                    </span>
+                  );
+                })()
                 : <FuriganaText word={displayPrompt} reading={furigana} showFuri={showFurigana} spacing="loose" rtMargin="mb-2" />
               }
             </div>
-            {showRomaji && (
-              <p className="text-base text-fg-secondary leading-relaxed">{displayRomaji}</p>
-            )}
-            {currentQuestion.hint && displayPrompt.includes('___') && (
-              <p className="text-sm text-muted italic mt-2">{currentQuestion.hint}</p>
+            {!reversed && (
+              <p className={`text-sm text-muted/70 tracking-wide font-mono tabular-nums transition-opacity duration-300 ${showRomaji ? 'opacity-100' : 'opacity-0'}`}>
+                [{displayRomaji}]
+              </p>
             )}
           </div>
 
-          {/* Answer Input */}
+          {/* Input */}
           <div className="mb-5">
-            <input ref={inputRef} type="text" defaultValue={input} onKeyDown={handleKeyDown}
-              placeholder="Type your answer…"
-              className="w-full px-4 py-3.5 text-lg sm:text-xl bg-surface-2 border-2 border-border-strong rounded-lg text-fg placeholder:text-muted outline-none focus:border-accent transition-colors" />
+            <input ref={inputRef} type="text"
+              placeholder="Type answer (in hiragana)…"
+              autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false}
+              className="w-full px-4 py-3.5 text-lg sm:text-xl bg-surface-2 border-2 border-border-strong rounded-lg text-fg placeholder:text-muted outline-none focus:border-accent transition-colors"
+              onKeyDown={handleKeyDown}
+            />
           </div>
 
-          {/* Actions */}
+          {/* Action */}
           <div className="flex gap-2">
             <button onClick={handleSubmit}
-              className="px-8 py-3 bg-accent text-white rounded-lg text-base font-semibold hover:brightness-112 transition-all">
+              className="flex-1 py-3.5 bg-accent text-white rounded-lg text-base font-semibold hover:brightness-112 transition-all">
               Check Answer
             </button>
           </div>
@@ -317,12 +336,10 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
       {phase === 'feedback' && (
         <>
           {/* Feedback */}
-          <div className={`p-5 rounded-lg mb-4 animate-slide-up ${
-            isCorrect ? 'bg-success-bg border border-success/20' : 'bg-error-bg border border-error/20'
-          }`}>
-            <div className={`font-bold text-base mb-1.5 flex items-center gap-2 ${
-              isCorrect ? 'text-success' : 'text-error'
+          <div className={`p-5 rounded-lg mb-4 animate-slide-up ${isCorrect ? 'bg-success-bg border border-success/20' : 'bg-error-bg border border-error/20'
             }`}>
+            <div className={`font-bold text-base mb-1.5 flex items-center gap-2 ${isCorrect ? 'text-success' : 'text-error'
+              }`}>
               <Icon icon={isCorrect ? 'mdi:check-circle' : 'mdi:close-circle'} className="w-5 h-5" />
               {isCorrect ? 'Correct!' : 'Not quite'}
             </div>
@@ -339,7 +356,6 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
             </div>
           </div>
 
-          {/* Next Button */}
           <button autoFocus onClick={handleSubmit}
             className="w-full py-3.5 bg-surface-2 text-fg border border-border-strong rounded-lg text-base font-semibold hover:bg-surface-3 hover:border-muted transition-all">
             {currentIdx + 1 === shuffled.length ? 'See Results →' : 'Continue →'}
