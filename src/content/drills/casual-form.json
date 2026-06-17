@@ -4,7 +4,7 @@
   "description": "Practice converting polite verb forms to casual / informal. Given a polite form (食べます / 食べません / 食べました / 食べませんでした), type the casual equivalent (食べる / 食べない / 食べた / 食べなかった). Toggle 'Reverse' to practice the other direction.",
   "level": "N5",
   "type": "conjugation",
-  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/verbs/",
+  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/masu/",
   "questions": [
     {
       "prompt": "食べます",
