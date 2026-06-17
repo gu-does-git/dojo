@@ -12,10 +12,72 @@ const { current = 'home' } = Astro.props;
       <img src="/favicon.svg" alt="Dojo" class="w-7 h-7" />
       Dojo
     </a>
-    <ul class="flex gap-1 list-none m-0 p-0">
-      <li><a href="/" class:list={['text-sm font-medium no-underline px-4 py-1.5 rounded-full transition-colors duration-150', current === 'home' ? 'text-fg bg-surface-2' : 'text-muted hover:text-fg-secondary hover:bg-border']}>Home</a></li>
-      <li><a href="/kana" class:list={['text-sm font-medium no-underline px-4 py-1.5 rounded-full transition-colors duration-150', current === 'kana' ? 'text-fg bg-surface-2' : 'text-muted hover:text-fg-secondary hover:bg-border']}>Kana</a></li>
-      <li><a href="/drills" class:list={['text-sm font-medium no-underline px-4 py-1.5 rounded-full transition-colors duration-150', current === 'drills' ? 'text-fg bg-surface-2' : 'text-muted hover:text-fg-secondary hover:bg-border']}>Drills</a></li>
+    <ul class="hidden sm:flex gap-1 list-none m-0 p-0">
+      <li><a href="/" class:list={['text-sm font-medium no-underline px-4 py-2.5 min-h-[44px] flex items-center rounded-full transition-colors duration-150', current === 'home' ? 'text-fg bg-surface-2' : 'text-muted hover:text-fg-secondary hover:bg-border']}>Home</a></li>
+      <li><a href="/kana" class:list={['text-sm font-medium no-underline px-4 py-2.5 min-h-[44px] flex items-center rounded-full transition-colors duration-150', current === 'kana' ? 'text-fg bg-surface-2' : 'text-muted hover:text-fg-secondary hover:bg-border']}>Kana</a></li>
+      <li><a href="/drills" class:list={['text-sm font-medium no-underline px-4 py-2.5 min-h-[44px] flex items-center rounded-full transition-colors duration-150', current === 'drills' ? 'text-fg bg-surface-2' : 'text-muted hover:text-fg-secondary hover:bg-border']}>Drills</a></li>
     </ul>
+
+    <!-- Hamburger button (mobile only) -->
+    <button id="mobileMenuBtn" type="button" aria-label="Toggle menu" aria-expanded="false"
+      class="sm:hidden w-11 h-11 flex items-center justify-center rounded-full text-fg hover:bg-surface-2 active:bg-surface-3 active:scale-95 transition-all duration-150">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" id="iconMenu" class="w-6 h-6 transition-all duration-200">
+        <path d="M3 6h18M3 12h18M3 18h18" />
+      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" id="iconClose" class="w-6 h-6 transition-all duration-200 hidden">
+        <path d="M6 6l12 12M6 18L18 6" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu panel (always in DOM, animates via grid-rows + opacity) -->
+  <div id="mobileMenu" class="grid grid-rows-[0fr] opacity-0 transition-all duration-250 ease-out data-[open=true]:grid-rows-[1fr] data-[open=true]:opacity-100 sm:hidden" data-open="false" aria-hidden="true">
+    <div class="overflow-hidden min-h-0">
+      <div class="border-t border-border bg-bg/95 backdrop-blur-lg">
+        <a href="/" class:list={['block px-6 py-3 min-h-[44px] flex items-center text-base font-medium no-underline border-b border-border transition-colors duration-150', current === 'home' ? 'text-fg bg-surface-2' : 'text-fg-secondary hover:bg-surface-2']}>Home</a>
+        <a href="/kana" class:list={['block px-6 py-3 min-h-[44px] flex items-center text-base font-medium no-underline border-b border-border transition-colors duration-150', current === 'kana' ? 'text-fg bg-surface-2' : 'text-fg-secondary hover:bg-surface-2']}>Kana</a>
+        <a href="/drills" class:list={['block px-6 py-3 min-h-[44px] flex items-center text-base font-medium no-underline transition-colors duration-150', current === 'drills' ? 'text-fg bg-surface-2' : 'text-fg-secondary hover:bg-surface-2']}>Drills</a>
+      </div>
+    </div>
   </div>
 </nav>
+
+<script>
+  const btn = document.getElementById('mobileMenuBtn') as HTMLButtonElement | null;
+  const menu = document.getElementById('mobileMenu');
+  const iconMenu = document.getElementById('iconMenu');
+  const iconClose = document.getElementById('iconClose');
+
+  const setOpen = (open: boolean) => {
+    btn?.setAttribute('aria-expanded', String(open));
+    if (open) {
+      menu?.setAttribute('data-open', 'true');
+      menu?.setAttribute('aria-hidden', 'false');
+      iconMenu?.classList.add('hidden');
+      iconClose?.classList.remove('hidden');
+    } else {
+      menu?.removeAttribute('data-open');
+      menu?.setAttribute('aria-hidden', 'true');
+      iconMenu?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    }
+  };
+
+  btn?.addEventListener('click', () => {
+    setOpen(btn.getAttribute('aria-expanded') !== 'true');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && btn?.getAttribute('aria-expanded') === 'true') {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (btn?.getAttribute('aria-expanded') !== 'true') return;
+    const target = e.target as Node;
+    if (menu?.contains(target) || btn?.contains(target)) return;
+    setOpen(false);
+  });
+</script>

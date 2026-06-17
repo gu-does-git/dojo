@@ -292,7 +292,7 @@ export default function KanaSession() {
 
     const KanaRowTile = ({ row, allSelected, onToggle }: { row: { rowChar: string; items: Kana[] }; allSelected: boolean; onToggle: () => void }) => (
       <button onClick={onToggle} type="button" aria-pressed={allSelected}
-        className={`flex flex-col items-center justify-center py-2.5 px-2 rounded-lg border transition-all cursor-pointer ${allSelected ? 'bg-accent-mid border-accent' : 'bg-surface-2 border-border hover:border-border-strong hover:bg-surface-3'}`}>
+        className={`flex flex-col items-center justify-center py-3 px-2 rounded-lg border transition-all duration-150 active:scale-95 cursor-pointer ${allSelected ? 'bg-accent-mid border-accent' : 'bg-surface-2 border-border hover:border-border-strong hover:bg-surface-3'}`}>
         <span style={{ fontFamily: 'var(--font-jp)' }} className="text-2xl leading-none mb-0.5">
           {row.rowChar}
         </span>
@@ -305,7 +305,7 @@ export default function KanaSession() {
     return (
       <div className="animate-fade-in">
         <div className="flex items-center justify-between mb-6">
-          <h1 className="font-display text-3xl font-bold tracking-tight">Practice Hiragana &amp; Katakana</h1>
+          <h1 className="font-display text-2xl sm:text-3xl font-bold tracking-tight">Practice Hiragana &amp; Katakana</h1>
         </div>
 
         {/* Quick reference charts */}
@@ -399,7 +399,7 @@ export default function KanaSession() {
         {/* Progress bar */}
         <div className="flex items-center gap-3.5 pt-4 pb-3 sm:pt-7 sm:pb-5">
           <button onClick={handleGoToSetup}
-            className="text-sm text-muted font-medium hover:text-fg transition-colors no-underline shrink-0 cursor-pointer">
+            className="text-sm text-muted font-medium hover:text-fg transition-all no-underline shrink-0 cursor-pointer min-h-[44px] flex items-center active:opacity-70 duration-150">
             ← Back
           </button>
           <button onClick={() => setChartOpen('hiragana')}
@@ -417,7 +417,7 @@ export default function KanaSession() {
             {index + 1} / {queue.length}
           </span>
           <button onClick={handleEndEarly}
-            className="text-xs text-muted font-medium hover:text-error transition-colors cursor-pointer shrink-0">
+            className="text-xs text-muted font-medium hover:text-error transition-all cursor-pointer shrink-0 min-h-[44px] flex items-center active:opacity-70 duration-150">
             End session
           </button>
         </div>
@@ -475,7 +475,7 @@ export default function KanaSession() {
         {renderChartModal()}
 
         {/* Keyboard shortcuts hint */}
-        <p className="text-xs text-muted text-center mt-4">
+        <p className="hidden sm:block text-xs text-muted text-center mt-4">
           <span className="text-fg-secondary font-medium">Shortcuts:</span>{' '}
           <kbd className="px-1.5 py-0.5 rounded bg-surface-2 border border-border text-fg text-[10px] font-mono">Ctrl</kbd>
           +

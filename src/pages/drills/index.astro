@@ -49,7 +49,7 @@ const drills = await getCollection('drills');
               data-desc={drill.data.description?.toLowerCase() ?? ''}
             >
               <div class="flex-1 min-w-0">
-                <div class="text-base font-semibold flex items-center gap-2 mb-0.5">
+                <div class="text-base font-semibold flex items-center gap-2 flex-wrap mb-0.5">
                   {drill.data.title}
                   <span class={`text-xs font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wide ${
                     drill.data.level === 'N5' ? 'bg-success/15 text-success' :

@@ -44,6 +44,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
   const [toast, setToast] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const [results, setResults] = useState<Array<{ question: Question; userAnswer: string; correct: boolean }>>([]);
+  const [menuOpen, setMenuOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => { setMounted(true); }, []);
@@ -62,6 +63,17 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
   const furigana = toHiragana(displayRomaji);
   const correctRomaji = reversed ? currentQuestion.romaji : activeAnswerRomaji;
   const percentage = Math.round((score / shuffled.length) * 100);
+
+  const toggles = [
+    { key: 'furigana', label: '\u3042 Furigana', value: showFurigana, onChange: setShowFurigana, show: true },
+    { key: 'reverse', label: '\u21c4 Reverse', value: reversed, onChange: setReversed, show: drillType !== 'particles' },
+    { key: 'polite', label: '\u656c Polite', value: polite, onChange: setPolite, show: !!currentQuestion?.politeAnswer },
+    { key: 'romaji', label: 'EN Romaji', value: showRomaji, onChange: setShowRomaji, show: true },
+    { key: 'tense', label: '\u6642 Tense', value: showTense, onChange: setShowTense, show: !!currentQuestion?.tense },
+  ];
+  const visibleToggles = toggles.filter(t => t.show);
+  const desktopCols = Math.min(visibleToggles.length, 4) as 1 | 2 | 3 | 4;
+  const desktopGridClass = { 1: 'sm:grid-cols-1', 2: 'sm:grid-cols-2', 3: 'sm:grid-cols-3', 4: 'sm:grid-cols-4' }[desktopCols];
 
   useEffect(() => {
     if (mounted && phase === 'answering' && inputRef.current) {
@@ -212,60 +224,47 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
         </span>
       </div>
 
-      {/* Toggle Bar */}
-      <div className="grid grid-cols-4 gap-3 mb-5 p-3 bg-surface border border-border rounded-lg">
-        <div className="flex items-center justify-center">
-          <button onClick={() => setShowFurigana(v => !v)}
-            className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${showFurigana ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
-            <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showFurigana ? 'bg-accent' : 'bg-surface-3'}`}>
-              <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${showFurigana ? 'translate-x-full' : '-translate-x-0.5'}`} />
-            </span>
-            あ Furigana
-          </button>
-        </div>
-        {drillType !== 'particles' && (
-          <div className="flex items-center justify-center">
-            <button onClick={() => setReversed(v => !v)}
-              className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${reversed ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
-              <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${reversed ? 'bg-accent' : 'bg-surface-3'}`}>
-                <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${reversed ? 'translate-x-full' : '-translate-x-0.5'}`} />
+      {/* Desktop toggle bar (sm+) */}
+      <div className={`hidden sm:grid ${desktopGridClass} gap-3 mb-5 p-3 bg-surface border border-border rounded-lg`}>
+        {visibleToggles.map(t => (
+          <div key={t.key} className="flex items-center justify-center">
+            <button onClick={() => t.onChange((v: boolean) => !v)}
+              className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full active:scale-95 transition-all duration-150 cursor-pointer ${t.value ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
+              <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors duration-200 ${t.value ? 'bg-accent' : 'bg-surface-3'}`}>
+                <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform duration-200 ${t.value ? 'translate-x-full' : '-translate-x-0.5'}`} />
               </span>
-              ⇄ Reverse
+              {t.label}
             </button>
           </div>
-        )}
-        {currentQuestion?.politeAnswer && (
-          <div className="flex items-center justify-center">
-            <button onClick={() => setPolite(v => !v)}
-              className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${polite ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
-              <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${polite ? 'bg-accent' : 'bg-surface-3'}`}>
-                <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${polite ? 'translate-x-full' : '-translate-x-0.5'}`} />
-              </span>
-              敬 Polite
-            </button>
-          </div>
-        )}
-        <div className="flex items-center justify-center">
-          <button onClick={() => setShowRomaji(v => !v)}
-            className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${showRomaji ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
-            <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showRomaji ? 'bg-accent' : 'bg-surface-3'}`}>
-              <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${showRomaji ? 'translate-x-full' : '-translate-x-0.5'}`} />
-            </span>
-            EN Romaji
-          </button>
-        </div>
-        {currentQuestion?.tense && (
-          <div className="flex items-center justify-center">
-            <button onClick={() => setShowTense(v => !v)}
-              className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${showTense ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
-              <span className={`relative w-8 h-4 rounded-full scale-75 transition-colors ${showTense ? 'bg-accent' : 'bg-surface-3'}`}>
-                <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${showTense ? 'translate-x-full' : '-translate-x-0.5'}`} />
-              </span>
-              時 Tense
-            </button>
-          </div>
-        )}
+        ))}
       </div>
+
+      {/* Mobile FAB (sm-) */}
+      {visibleToggles.length > 0 && (
+        <button onClick={() => setMenuOpen(true)} aria-label="Open settings" aria-expanded={menuOpen}
+          className={`sm:hidden fixed bottom-4 left-4 z-40 w-11 h-11 rounded-full bg-surface-2 border border-border-strong text-fg flex items-center justify-center shadow-lg active:scale-90 transition-all duration-150 ${menuOpen ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
+          <Icon icon="mdi:tune-vertical" className="w-5 h-5" />
+        </button>
+      )}
+
+      {/* Mobile popover (sm-) */}
+      {menuOpen && visibleToggles.length > 0 && (
+        <>
+          <div onClick={() => setMenuOpen(false)} className="sm:hidden fixed inset-0 z-40 bg-black/20 backdrop-blur-sm animate-fade-in" />
+          <div className="sm:hidden fixed inset-x-4 top-20 z-50 bg-surface border border-border rounded-lg p-3 space-y-2 shadow-2xl animate-fade-in">
+            {visibleToggles.map((t, i) => (
+              <button key={t.key} onClick={() => { t.onChange((v: boolean) => !v); setMenuOpen(false); }}
+                style={{ animationDelay: `${i * 35}ms` }}
+                className={`animate-slide-up flex items-center justify-between w-full py-3 px-3 min-h-[44px] rounded-md text-sm font-medium border active:scale-[0.98] transition-colors duration-150 cursor-pointer ${t.value ? 'text-accent bg-accent-soft border-transparent' : 'text-fg-secondary bg-surface-2 border-border-strong/40'}`}>
+                <span>{t.label}</span>
+                <span className={`relative w-8 h-4 rounded-full transition-colors duration-200 shrink-0 ${t.value ? 'bg-accent' : 'bg-surface-3'}`}>
+                  <span className={`absolute top-0.5 left-1 w-3 h-3 rounded-full bg-white transition-transform duration-200 ${t.value ? 'translate-x-full' : '-translate-x-0.5'}`} />
+                </span>
+              </button>
+            ))}
+          </div>
+        </>
+      )}
 
       {phase === 'answering' && (
         <>
@@ -376,7 +375,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
       )}
       {cheatsheetUrl && (
         <a href={cheatsheetUrl} target="_blank" rel="noopener noreferrer"
-          className="fixed bottom-4 right-4 z-50 w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center shadow-lg hover:brightness-112 transition-all no-underline">
+          className="fixed bottom-4 right-4 z-30 w-11 h-11 active:scale-90 transition-all duration-150 rounded-full bg-accent text-white flex items-center justify-center shadow-lg hover:brightness-112 no-underline">
           <Icon icon="mdi:help" className="w-5 h-5" />
         </a>
       )}
