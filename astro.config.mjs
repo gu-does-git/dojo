@@ -11,7 +11,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  
+  site: "https://japanese.gudoes.dev",
+
   integrations: [react(), sitemap(), icon()],
 
   fonts: [

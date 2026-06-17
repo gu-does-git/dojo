@@ -4,7 +4,7 @@
   "description": "Practice recognizing the dictionary (plain) form of verbs. Given a ます-form verb, type its dictionary form (e.g., 食べます → 食べる). Toggle 'Reverse' to practice the other direction.",
   "level": "N5",
   "type": "conjugation",
-  "cheatsheetUrl": "https://www.tofugu.com/japanese-grammar/verb-plain-present-form/",
+  "cheatsheetUrl": "https://hoodjapanese.com/2025/08/13/understanding-%E3%81%98%E3%81%97%E3%82%87%E3%81%91%E3%81%84-jishokei-a-streetwise-jlpt-n5-grammar-guide/",
   "questions": [
     {
       "prompt": "食べます",

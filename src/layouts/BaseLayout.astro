@@ -1,4 +1,3 @@
----
 import "../styles/global.css";
 
 interface Props {
@@ -7,16 +6,29 @@ interface Props {
 }
 
 const { title = 'Dojo — Japanese Grammar Drills', description = 'Interactive practice platform for Japanese grammar.' } = Astro.props;
----
+const sitename = 'Dojo';
+const ogImage = '/logo.svg';
 
 <!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content="https://japanese.gudoes.dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={sitename} />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body>
     <slot />
