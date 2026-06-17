@@ -213,7 +213,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
       </div>
 
       {/* Toggle Bar */}
-      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-5 p-3 bg-surface border border-border rounded-lg">
+      <div className="grid grid-cols-4 gap-3 mb-5 p-3 bg-surface border border-border rounded-lg">
         <div className="flex items-center justify-center">
           <button onClick={() => setShowFurigana(v => !v)}
             className={`flex items-center justify-center gap-3 px-2 py-1.5 rounded-full text-sm font-medium border w-full transition-all cursor-pointer ${showFurigana ? 'text-accent bg-accent-soft border-transparent' : 'text-muted border-border-strong/40 hover:text-fg-secondary hover:bg-surface-2'}`}>
@@ -279,7 +279,12 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
                   }`}>{currentQuestion.difficulty}</span>
               )}
               {showTense && currentQuestion.tense && (
-                <span className="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent border border-accent/20">
+                <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full border ${{
+                  'Non-past': 'bg-accent-soft text-accent border-accent/20',
+                  'Non-past Neg': 'bg-error-bg text-error border-error/20',
+                  'Past': 'bg-success-bg text-success border-success/20',
+                  'Past Neg': 'bg-gold-soft text-gold border-gold/20',
+                }[currentQuestion.tense] || 'bg-accent-soft text-accent border-accent/20'}`}>
                   {currentQuestion.tense}
                 </span>
               )}
@@ -308,7 +313,7 @@ export default function DrillSession({ questions, cheatsheetUrl, drillType }: Pr
             </div>
             {!reversed && (
               <p className={`text-sm text-muted/70 tracking-wide font-mono tabular-nums transition-opacity duration-300 ${showRomaji ? 'opacity-100' : 'opacity-0'}`}>
-                [{displayRomaji}]
+                {displayRomaji}
               </p>
             )}
           </div>
