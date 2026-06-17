@@ -1,34 +1,45 @@
+---
 import "../styles/global.css";
 
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
-const { title = 'Dojo — Japanese Grammar Drills', description = 'Interactive practice platform for Japanese grammar.' } = Astro.props;
-const sitename = 'Dojo';
-const ogImage = '/logo.svg';
+const {
+  title = "Dojo — Japanese Grammar Drills",
+  description = "Interactive practice platform for Japanese grammar.",
+  image = "/logo.svg",
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
 
-<!doctype html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
-    <!-- Open Graph -->
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content="https://japanese.gudoes.dev" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content={sitename} />
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
   </head>
   <body>
     <slot />
